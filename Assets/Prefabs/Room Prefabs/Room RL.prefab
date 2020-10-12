@@ -997,6 +997,8 @@ GameObject:
   - component: {fileID: 3230298699136949999}
   - component: {fileID: 4935765133997636225}
   - component: {fileID: 9126052302685921757}
+  - component: {fileID: -6611314868036334711}
+  - component: {fileID: -1334063834171285202}
   m_Layer: 0
   m_Name: Room RL
   m_TagString: Wall
@@ -1196,5 +1198,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c1031cdf3ccbb6341afb4bf649e792df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-6611314868036334711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781428571174813416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 203c0350d5db8654baba535c9ef22430, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _roomVisited: 0
+--- !u!114 &-1334063834171285202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781428571174813416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8f7bbd49537e6f4e8a850fded73091a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
