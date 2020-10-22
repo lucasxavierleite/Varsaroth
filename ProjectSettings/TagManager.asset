@@ -8,6 +8,8 @@ TagManager:
   - Door
   - RoomSpawnPoint
   - Rooms
+  - Destroyer
+  - Enemy
   layers:
   - Default
   - TransparentFX

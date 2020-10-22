@@ -34,5 +34,6 @@ public class RoomTemplates : MonoBehaviour
     void SpawnGate()
     {
         Instantiate(_nextFloor,_rooms[_rooms.Count - 1].transform.position, Quaternion.identity);
+        _rooms[_rooms.Count - 1].SendMessage("UpgradeRoom");
     }
 }

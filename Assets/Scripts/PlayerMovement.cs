@@ -36,12 +36,12 @@ public class PlayerMovement : MonoBehaviour
 
 
     /// <summary>
-    /// This Method moves the player to another room when it comes in contact with a door
+    /// This Method is activated when the player enters in contact with a trigger hitbox
     /// </summary>
     /// <param name="other"> The trigger that the player collided with</param>
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Door"))
+        if (other.CompareTag("Door")) // if player in contact with door, move camera
         {
             if (other.name == "Door Up")
             {
@@ -64,6 +64,11 @@ public class PlayerMovement : MonoBehaviour
                 _playerRB.transform.position += Vector3.left * 100;
                 Camera.main.transform.position += Vector3.left * 384;
             }
+        }
+
+        if (other.CompareTag("Enemy")) // if player in contact with enemy, do X
+        {
+            Destroy(other.gameObject); // for now, kills enemy
         }
     }
 }

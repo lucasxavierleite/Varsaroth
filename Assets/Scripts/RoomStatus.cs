@@ -4,9 +4,19 @@ using UnityEngine;
 
 public class RoomStatus : MonoBehaviour
 {
-    public bool _roomVisited;
-    int _enemiesRemaining = -1;
-    // _roomVisited indicates if the room has been visited before
+    public bool _roomVisited;// indicates if the room has been visited before
+
+    public bool _currentRoom = false;
+    public int _enemiesRemaining = -1;
+
+    EnemySpawner _roomSpawn;
+    bool _isBoss = false; // indicates if a room is a boss room
+    
+
+    private void Start()
+    {
+        _roomSpawn = GetComponentInParent<EnemySpawner>();
+    }
 
     private void Update()
     {
@@ -17,30 +27,51 @@ public class RoomStatus : MonoBehaviour
                 if (transform.GetChild(a).tag == "Door")
                 {
                     Debug.Log(transform.GetChild(a).name);
-                    transform.GetChild(a).gameObject.SetActive(true);
+                    transform.GetChild(a).gameObject.SetActive(true); // open doors after all enemies defeated
                 }
             }
             _enemiesRemaining--;
         }        
     }
 
+    // When room becomes visible, if it hasn't been visited yet, spawn enemies in it
     private void OnBecameVisible()
     {
         if (_roomVisited == false)
         {
             _roomVisited = true;
+            _currentRoom = true;
 
-            for (int a = 0; a < transform.childCount; a++)
+            if (_isBoss == false)
             {
-                if (transform.GetChild(a).tag == "Door")
+                for (int a = 0; a < transform.childCount; a++)
                 {
-                    Debug.Log(transform.GetChild(a));
-                    transform.GetChild(a).gameObject.SetActive(false);
+                    if (transform.GetChild(a).tag == "Door")
+                    {
+                        transform.GetChild(a).gameObject.SetActive(false);  // close doors while enemies still alive
+                        // could change later to another sprite of a closed door
+                    }
                 }
+                _enemiesRemaining = Random.Range(1, 3);
+                _roomSpawn.SpawnEnemies(_enemiesRemaining);
             }
-            // _enemiesRemaining = spawnmobs
+            else
+            {
+                //Spawn Boss
+            }
         }
-        _enemiesRemaining = 0;
+        
+    }
+
+    private void OnBecameInvisible()
+    {
+        _currentRoom = false;
+    }
+
+    public void UpgradeRoom()   // turns room into a boss room
+    {
+        _isBoss = true;
+        Debug.Log("sala boss");
     }
 
 }
