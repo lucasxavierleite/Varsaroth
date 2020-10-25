@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3302745654046268217}
   - component: {fileID: 654313645510992512}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: triangle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4470506283902241606}
   - component: {fileID: 8921410364113368060}
   - component: {fileID: 4695726398369924239}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Enemy2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -175,5 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  walkingDistance: 100
-  smoothTime: 1
+  _walkingDistance: 300
+  speed: 50
+  _canMove: 0
+  _currentAnimationState: 0

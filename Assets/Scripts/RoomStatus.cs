@@ -20,7 +20,7 @@ public class RoomStatus : MonoBehaviour
 
     private void Update()
     {
-        if (_enemiesRemaining == 0)
+        if (_enemiesRemaining <= 0)
         {
             for (int a = 0; a < transform.childCount; a++)
             {

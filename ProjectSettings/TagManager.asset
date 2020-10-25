@@ -10,6 +10,7 @@ TagManager:
   - Rooms
   - Destroyer
   - Enemy
+  - TrapDoor
   layers:
   - Default
   - TransparentFX
@@ -20,8 +21,8 @@ TagManager:
   - 
   - 
   - RoomSpawner
-  - 
-  - 
+  - Enemies
+  - Player
   - 
   - 
   - 

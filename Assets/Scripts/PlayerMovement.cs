@@ -1,38 +1,257 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D _playerRB;
     Vector3 _moveDirection;
-    private float _moveSpeed = 100f;
+    float _moveSpeed = 250f;
+
+    //player states
+    const int STATE_IDLE = 0;
+    const int STATE_WALK = 1;
+    const int STATE_ATTACK = 2;
+    const int STATE_DODGE = 3;
+    const int STATE_DEAD = 4;
+
+    public string _currentDirection = "right";
+    public static int _currentAnimationState = STATE_IDLE;
+
+    Animator _animator;
+    SpriteRenderer _renderer;
+
+    private bool _attackInb;
+    private bool _dodgeInb;
+
+    public float _dashSpeed;
+    public bool _isInvulnerable;
+
+
+    public Transform[] _attackPoint;
+    public float _attackRange = 10f;
+    public LayerMask _enemyLayers;
 
     // Start is called before the first frame update
     void Start()
     {
+        _currentAnimationState = STATE_IDLE;
         _playerRB = GetComponent<Rigidbody2D>();
+        _animator = GetComponentInChildren<Animator>();
+        _renderer = GetComponentInChildren<SpriteRenderer>();
+        _isInvulnerable = false;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        _moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, Input.GetAxis("Vertical") * _moveSpeed, 0);
+        if (_currentAnimationState != STATE_DEAD && Time.timeScale != 0)
+        {
+            _attackInb = Input.GetKeyDown("j");
+            _dodgeInb = Input.GetKeyDown("k");
+            if (_attackInb && _currentAnimationState != STATE_DODGE)
+            {
+
+                ChangeState(STATE_ATTACK);
+            }
+            if (_dodgeInb)
+            {
+
+                ChangeState(STATE_DODGE);
+            }
+
+            _moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, Input.GetAxis("Vertical") * _moveSpeed, 0);
+
+            if (_currentAnimationState != STATE_DODGE && _currentAnimationState != STATE_ATTACK)
+            {
+                MovePlayer(_moveDirection);
+            }
+        }
     }
-
-
-    private void FixedUpdate()
-    {
-        //if (Player.state != dodging)
-        //{
-            MovePlayer(_moveDirection);
-        //}  
-    } 
 
     void MovePlayer(Vector3 dir)
     {
-        _playerRB.MovePosition(transform.position + (dir * Time.deltaTime));
+        if (dir != Vector3.zero)
+        {
+            _playerRB.MovePosition(transform.position + (dir * Time.deltaTime));
+            if (dir.x < 0)
+            {
+                ChangeDirection("left");
+            }
+            else if (dir.x > 0)
+            {
+                ChangeDirection("right");
+            }
+            ChangeState(STATE_WALK);
+        }
+        else
+        {
+            ChangeState(STATE_IDLE);
+        }
     }
+
+    /// <summary>
+    /// Changes player direction
+    /// </summary>
+    /// <param name="direction">target direction</param>
+    void ChangeDirection(string direction)
+    {
+
+        if (_currentDirection != direction)
+        {
+            if (direction == "right")
+            {
+                _renderer.flipX = false;
+                _currentDirection = "right";
+            }
+            else if (direction == "left")
+            {
+                _renderer.flipX = true;
+                _currentDirection = "left";
+            }
+        }
+
+    }
+
+    /// <summary>
+    /// Changes player animation state
+    /// </summary>
+    /// <param name="state"> animation to play</param>
+    void ChangeState(int state)
+    {
+
+        if (_currentAnimationState == state)
+            return;
+
+        switch (state)
+        {
+            case STATE_IDLE:
+                _animator.SetInteger("state", STATE_IDLE);//0
+                break;
+
+            case STATE_WALK:
+                _animator.SetInteger("state", STATE_WALK);//1
+                break;
+
+            case STATE_ATTACK:
+                _animator.SetTrigger("attack");//2
+                break;
+
+            case STATE_DODGE:
+                _animator.SetTrigger("dodge");//3
+                break;
+
+            case STATE_DEAD:
+                _animator.SetBool("dead", true);
+                break;
+
+        }
+
+        _currentAnimationState = state;
+    }
+
+    /// <summary>
+    /// This Method makes the player attack whichever way he is looking
+    /// </summary>
+    void StartAttack()
+    {
+        Collider2D[] _enemiesHit;
+
+        //detect enemies hit
+        if (_currentDirection == "right")
+        {
+            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[0].position, _attackRange, _enemyLayers);
+        }
+        else
+        {
+            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[1].position, _attackRange, _enemyLayers);
+        }
+        
+        
+        //damage enemies hit, for now kills them
+        foreach (Collider2D enemy in _enemiesHit)
+        {
+            enemy.SendMessageUpwards("OnKill");
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+        if (_attackPoint == null) return;
+        Gizmos.DrawWireSphere(_attackPoint[0].position, _attackRange);
+        Gizmos.DrawWireSphere(_attackPoint[1].position, _attackRange);
+    }
+
+    /// <summary>
+    /// Stops attack
+    /// </summary>
+    void StopAttack()
+    {
+        //disable sword hitbox
+        if (_currentAnimationState == STATE_ATTACK)
+        {
+            ChangeState(STATE_IDLE);
+        }
+        
+    }
+
+    /// <summary>
+    /// This Method makes the player dodge whichever way he is looking
+    /// </summary>
+    void StartDodge()
+    {
+        if (_currentDirection == "right")
+        {
+            _playerRB.velocity = Vector2.right * _dashSpeed;
+        }
+        else
+        {
+            _playerRB.velocity = Vector2.left * _dashSpeed;
+        }
+        
+    }
+    /// <summary>
+    /// Stops dodge ability
+    /// </summary>
+    void StopDodge()
+    {   
+        _playerRB.velocity = Vector2.zero;
+        ChangeState(STATE_IDLE);
+    }
+
+    /// <summary>
+    /// Toggles invulnerability
+    /// </summary>
+    void ToggleInvulnerability()
+    {
+        if (_isInvulnerable == true)
+        {
+            _isInvulnerable = false;
+        }
+        else
+        {
+            _isInvulnerable = true;
+        }
+        Debug.Log("toggle:");
+    }
+
+   void OnKill()
+   {
+        if (_isInvulnerable == false)
+        {
+            ChangeState(STATE_DEAD);
+            Time.timeScale = 0.5f;
+        }   
+   }
+
+    public bool isAlive()
+    {
+        if (_currentAnimationState != STATE_DEAD)
+        {
+            return true;
+        }
+        else return false;
+    }
+
 
 
     /// <summary>
@@ -47,7 +266,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 _playerRB.transform.position += Vector3.up * 90;
                 Camera.main.transform.position += Vector3.up * 216;
-                
+
             }
             else if (other.name == "Door Down")
             {
@@ -65,10 +284,9 @@ public class PlayerMovement : MonoBehaviour
                 Camera.main.transform.position += Vector3.left * 384;
             }
         }
-
-        if (other.CompareTag("Enemy")) // if player in contact with enemy, do X
+        else if (other.CompareTag("TrapDoor"))  // if player touches trapdoor, send him to next level
         {
-            Destroy(other.gameObject); // for now, kills enemy
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         }
     }
 }
