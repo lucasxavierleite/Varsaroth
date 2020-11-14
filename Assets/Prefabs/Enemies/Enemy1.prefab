@@ -241,8 +241,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   _walkingDistance: 300
-  speed: 50
+  _speed: 50
   _canMove: 0
+  _attackRange: 20
+  _randomize: 0
   _currentAnimationState: 0
   _attackPoint:
   - {fileID: 6373727171929760456}

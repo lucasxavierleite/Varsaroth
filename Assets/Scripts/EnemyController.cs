@@ -9,13 +9,15 @@ public class EnemyController : MonoBehaviour
     SpriteRenderer _renderer;
     Animator _animator;
 
-    public float _walkingDistance = 300.0f; // maximum distance which the enemy will start moving towards the player
+    public float _walkingDistance; // maximum distance which the enemy will start moving towards the player
 
-    public float speed = 50.0f; //In what time will the enemy complete the journey between its position and the players position
+    public float _speed; // In what time will the enemy complete the journey between its position and the players position
 
     public bool _canMove = false; // Indicates if monster can move
 
-    private float _attackRange = 20.0f;
+    public float _attackRange;
+
+    public bool _randomize;// Allows randomization of above stats
 
     RoomStatus _temporaryRoom;
 
@@ -40,6 +42,13 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         _animator = GetComponentInChildren<Animator>();
         _renderer = GetComponentInChildren<SpriteRenderer>();
+
+        if (_randomize == true)//randomize stats
+        {
+            _walkingDistance = Random.Range(100, 500);
+            _speed = Random.Range(10, 100);
+            _attackRange = Random.Range(5, 50);
+        }
     }
 
     private void Update()
@@ -83,7 +92,7 @@ public class EnemyController : MonoBehaviour
 
     void MoveTowardsPlayer()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, _speed * Time.deltaTime);
     }
 
     void ChangeDirection(string direction)
