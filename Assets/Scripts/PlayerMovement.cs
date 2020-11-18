@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
     private bool _attackInb;
     private bool _dodgeInb;
 
+    private int player_hp = 200;
+
+    private int damage = 10; // dano que ele recebe a cada golpe (por padrao e 10)
+
     public float _dashSpeed;
     public bool _isInvulnerable;
 
@@ -47,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (_currentAnimationState != STATE_DEAD && Time.timeScale != 0)
         {
+
             _attackInb = Input.GetKeyDown("j");
             _dodgeInb = Input.GetKeyDown("k");
             if (_attackInb && _currentAnimationState != STATE_DODGE)
@@ -171,6 +176,7 @@ public class PlayerMovement : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
+            enemy.SendMessageUpwards("TakeDamage");
             enemy.SendMessageUpwards("OnKill");
         }
     }
@@ -236,7 +242,7 @@ public class PlayerMovement : MonoBehaviour
 
    void OnKill()
    {
-        if (_isInvulnerable == false)
+        if (player_hp <= 0 && _isInvulnerable == false)
         {
             ChangeState(STATE_DEAD);
             Time.timeScale = 0.5f;
@@ -252,7 +258,39 @@ public class PlayerMovement : MonoBehaviour
         else return false;
     }
 
+    /* Funcao do player de receber dano */
+    public void TakeDamage(){
+        Debug.Log("Vida do player = " + player_hp);
+        System.Random p = new System.Random();
+        player_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
+    }
 
+    /* geters e seters de HP e dano */
+    public int getHP(){
+        return player_hp;
+    }
+
+    public int getDamage(){
+        return damage;
+    }
+
+    public void setHP(int hp){
+        player_hp = hp;
+    }
+
+    public void setDamage(int dam){
+        damage = dam;
+    }
+
+
+
+    public void setDifficulty(int d){
+        switch(d){
+            case 1: player_hp = 200; damage = 10; break;
+            case 2: player_hp = 150; damage = 20; break;
+            case 3: player_hp = 100; damage = 30; break;
+        }
+    }
 
     /// <summary>
     /// This Method is activated when the player enters in contact with a trigger hitbox

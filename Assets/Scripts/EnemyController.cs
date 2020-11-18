@@ -9,15 +9,13 @@ public class EnemyController : MonoBehaviour
     SpriteRenderer _renderer;
     Animator _animator;
 
-    public float _walkingDistance; // maximum distance which the enemy will start moving towards the player
+    public float _walkingDistance = 300.0f; // maximum distance which the enemy will start moving towards the player
 
-    public float _speed; // In what time will the enemy complete the journey between its position and the players position
+    public float speed = 50.0f; //In what time will the enemy complete the journey between its position and the players position
 
     public bool _canMove = false; // Indicates if monster can move
 
-    public float _attackRange;
-
-    public bool _randomize;// Allows randomization of above stats
+    private float _attackRange = 20.0f;
 
     RoomStatus _temporaryRoom;
 
@@ -29,7 +27,11 @@ public class EnemyController : MonoBehaviour
     const int STATE_ATTACK = 2;
     const int STATE_DEAD = 3;
 
-    public float _currentAnimationState = STATE_IDLE;
+    private int damage = 30; // dano que um inimigo recebe a cada golpe (por padrao e 30)
+
+    private int enemy_hp = 90;
+
+    public int _currentAnimationState = STATE_IDLE;
 
     public Transform[] _attackPoint;
     public float _attackCircle = 5f;
@@ -42,19 +44,13 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         _animator = GetComponentInChildren<Animator>();
         _renderer = GetComponentInChildren<SpriteRenderer>();
-
-        if (_randomize == true)//randomize stats
-        {
-            _walkingDistance = Random.Range(100, 500);
-            _speed = Random.Range(10, 100);
-            _attackRange = Random.Range(5, 50);
-        }
     }
 
     private void Update()
     {
         if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != 4)
         {
+
             if (_canMove == true  && _currentAnimationState != STATE_ATTACK)
             {
                 ChangeState(STATE_WALK);
@@ -71,7 +67,6 @@ public class EnemyController : MonoBehaviour
                 ChangeDirection("left");
             }
 
-
             float distance = Vector2.Distance(transform.position, player.transform.position);
             //move enemy
             if (distance < _walkingDistance && distance > _attackRange)
@@ -86,13 +81,14 @@ public class EnemyController : MonoBehaviour
                 ChangeState(STATE_ATTACK);
 
             }
+            
         }
 
     }
 
     void MoveTowardsPlayer()
     {
-        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, _speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
     }
 
     void ChangeDirection(string direction)
@@ -165,6 +161,7 @@ public class EnemyController : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
+            enemy.SendMessageUpwards("TakeDamage");
             enemy.SendMessageUpwards("OnKill");
         }
     }
@@ -189,21 +186,57 @@ public class EnemyController : MonoBehaviour
 
     }
 
+    /* Funcao do inimigo de receber dano */
+    public void TakeDamage(){
+        System.Random p = new System.Random();
+        enemy_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
+        Debug.Log("Vida do inimigo = " + enemy_hp);
+    }
+
+    
+
+    /* geters e seters de HP e dano */
+    public int getHP(){
+        return enemy_hp;
+    }
+
+    public int getDamage(){
+        return damage;
+    }
+
+    public void setHP(int hp){
+        enemy_hp = hp;
+    }
+
+    public void setDamage(int dam){
+        damage = dam;
+    }
+    /***********************************/
+
+
+    public void setDifficulty(int d){
+        switch(d){
+            case 1: enemy_hp = 90; damage = 30; break;
+            case 2: enemy_hp = 100; damage = 20; break;
+            case 3: enemy_hp = 150; damage = 15; break;
+        }
+    }
 
     void OnKill() // on enemy killed, reduce amount of remaining enemies
     {
-        ChangeState(STATE_DEAD);
-        GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
-        foreach (GameObject room in rooms)
-        {
-            
-            _temporaryRoom = room.GetComponent<RoomStatus>();
-            if (_temporaryRoom._currentRoom == true)
+        if(enemy_hp <= 0){
+            ChangeState(STATE_DEAD);
+            GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
+            foreach (GameObject room in rooms)
             {
-                _temporaryRoom._enemiesRemaining--;
-                break;
+                _temporaryRoom = room.GetComponent<RoomStatus>();
+                if (_temporaryRoom._currentRoom == true)
+                {
+                    _temporaryRoom._enemiesRemaining--;
+                    break;
+                }
+                
             }
-            
         }
     }
 }
