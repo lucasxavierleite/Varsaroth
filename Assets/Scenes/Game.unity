@@ -556,7 +556,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 105
+  orthographic size: 103
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -909,6 +909,7 @@ MonoBehaviour:
   - {fileID: 7075602670593465461, guid: 27ef3c17fce93d044b3dafd4f53bba99, type: 3}
   _nextFloor: {fileID: 4391736735243209412, guid: 928f8a4f70f20dd4094169e977925969,
     type: 3}
+  _minimumSize: 0
   _leftToSpawn: 15
   _rooms: []
 --- !u!4 &631367853

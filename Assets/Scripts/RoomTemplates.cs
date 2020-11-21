@@ -17,7 +17,8 @@ public class RoomTemplates : MonoBehaviour
     [SerializeField]
     public GameObject _nextFloor;
 
-    public int _leftToSpawn = 15;
+    public int _minimumSize;
+    public int _leftToSpawn;
     public List<GameObject> _rooms;
 
     void Start() 
@@ -26,6 +27,9 @@ public class RoomTemplates : MonoBehaviour
         Debug.Log(_rand);
         Instantiate(StartRoom[_rand], transform.position, Quaternion.identity);
         Invoke("SpawnGate", 2f);
+
+        _leftToSpawn = 13 + 2 * StageData._data.GetStage();
+        _minimumSize = 2 * StageData._data.GetStage();
     }
 
     /// <summary>

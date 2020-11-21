@@ -42,8 +42,13 @@ public class RoomSpawner : MonoBehaviour
             // if spawn point needs to have a room with a bottom door
             if (_openingDirection == 1)
             {
+                // Makes sure levels have minimum ammount of rooms
+                if (_roomTemplates._minimumSize > 1)
+                {
+                    _rand = Random.Range(0, _roomTemplates.Down.Length - 1);
+                }
                 // Spawn room with bottom door
-                if (_roomTemplates._leftToSpawn > 1)
+                else if (_roomTemplates._leftToSpawn > 1)
                 {
                     _rand = Random.Range(0, _roomTemplates.Down.Length);
                 }
@@ -57,8 +62,13 @@ public class RoomSpawner : MonoBehaviour
             // if spawn point needs to have a room with a bottoptom door
             else if (_openingDirection == 2)
             {
+                // Makes sure levels have minimum ammount of rooms
+                if (_roomTemplates._minimumSize > 1)
+                {
+                    _rand = Random.Range(0, _roomTemplates.Up.Length - 1);
+                }
                 // Spawn room with top door
-                if (_roomTemplates._leftToSpawn > 1)
+                else if (_roomTemplates._leftToSpawn > 1)
                 {
                     _rand = Random.Range(0, _roomTemplates.Up.Length);
                 }
@@ -72,8 +82,13 @@ public class RoomSpawner : MonoBehaviour
             // if spawn point needs to have a room with a left door
             else if (_openingDirection == 3)
             {
+                // Makes sure levels have minimum ammount of rooms
+                if (_roomTemplates._minimumSize > 1)
+                {
+                    _rand = Random.Range(0, _roomTemplates.Left.Length - 1);
+                }
                 // Spawn room with left door
-                if (_roomTemplates._leftToSpawn > 1)
+                else if (_roomTemplates._leftToSpawn > 1)
                 {
                     _rand = Random.Range(0, _roomTemplates.Left.Length);
                 }
@@ -87,8 +102,13 @@ public class RoomSpawner : MonoBehaviour
             // if spawn point needs to have a room with a right door
             else if (_openingDirection == 4)
             {
+                // Makes sure levels have minimum ammount of rooms
+                if (_roomTemplates._minimumSize > 1)
+                {
+                    _rand = Random.Range(0, _roomTemplates.Right.Length - 1);
+                }
                 // Spawn room with right door
-                if (_roomTemplates._leftToSpawn > 1)
+                else if (_roomTemplates._leftToSpawn > 1)
                 {
                     _rand = Random.Range(0, _roomTemplates.Right.Length);
                 }
@@ -102,6 +122,7 @@ public class RoomSpawner : MonoBehaviour
             _spawned = true;
             _connected = true;
             _roomTemplates._leftToSpawn--;
+            _roomTemplates._minimumSize--;
         }
     }
 

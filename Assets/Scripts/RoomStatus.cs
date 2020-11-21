@@ -52,7 +52,7 @@ public class RoomStatus : MonoBehaviour
                         // could change later to another sprite of a closed door
                     }
                 }
-                _enemiesRemaining = Random.Range(5, 8);
+                _enemiesRemaining = Random.Range(StageData._data.GetStage() + 2, (StageData._data.GetStage() + 2) * 3/2);
                 _roomSpawn.SpawnEnemies(_enemiesRemaining);
             }
             else

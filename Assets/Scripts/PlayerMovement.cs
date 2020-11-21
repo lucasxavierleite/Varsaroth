@@ -324,6 +324,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.CompareTag("TrapDoor"))  // if player touches trapdoor, send him to next level
         {
+            StageData._data.NextLevel();// go to next level
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         }
     }
