@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
 
     Animator _animator;
     SpriteRenderer _renderer;
+    Collider2D _collider;
 
     private bool _attackInb;
     private bool _dodgeInb;
@@ -44,6 +45,7 @@ public class PlayerMovement : MonoBehaviour
         _playerRB = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
         _renderer = GetComponentInChildren<SpriteRenderer>();
+        _collider = GetComponent<Collider2D>();
         _isInvulnerable = false;
     }
 
@@ -102,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
     void ChangeDirection(string direction)
     {
 
-        if (_currentDirection != direction)
+        if (_currentAnimationState != STATE_ATTACK && _currentDirection != direction)
         {
             if (direction == "right")
             {
@@ -148,6 +150,7 @@ public class PlayerMovement : MonoBehaviour
 
             case STATE_DEAD:
                 _animator.SetBool("dead", true);
+                _collider.enabled = false;
                 break;
 
         }
@@ -237,7 +240,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _isInvulnerable = true;
         }
-        Debug.Log("toggle:");
+        //Debug.Log("toggle:");
     }
 
    void OnKill()

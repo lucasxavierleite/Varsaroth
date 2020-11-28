@@ -23,10 +23,10 @@ TagManager:
   - RoomSpawner
   - Enemies
   - Player
-  - 
-  - 
-  - 
-  - 
+  - UnvisitedRoom
+  - VisitedRoom
+  - Icons
+  - EnemyToWall
   - 
   - 
   - 

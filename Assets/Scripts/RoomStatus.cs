@@ -20,17 +20,18 @@ public class RoomStatus : MonoBehaviour
 
     private void Update()
     {
-        if (_enemiesRemaining <= 0)
+        if (_currentRoom) Debug.Log(_enemiesRemaining);
+        if (_currentRoom && _enemiesRemaining <= 0)
         {
+            _currentRoom = false;
             for (int a = 0; a < transform.childCount; a++)
             {
                 if (transform.GetChild(a).tag == "Door")
                 {
-                    Debug.Log(transform.GetChild(a).name);
                     transform.GetChild(a).gameObject.SetActive(true); // open doors after all enemies defeated
+                    transform.GetChild(a).gameObject.layer = 12;
                 }
             }
-            _enemiesRemaining--;
         }        
     }
 
@@ -40,6 +41,7 @@ public class RoomStatus : MonoBehaviour
         if (_roomVisited == false)
         {
             _roomVisited = true;
+            gameObject.layer = 12;
             _currentRoom = true;
 
             if (_isBoss == false)
@@ -52,7 +54,7 @@ public class RoomStatus : MonoBehaviour
                         // could change later to another sprite of a closed door
                     }
                 }
-                _enemiesRemaining = Random.Range(StageData._data.GetStage() + 2, (StageData._data.GetStage() + 2) * 3/2);
+                _enemiesRemaining = Random.Range(StageData._data.GetStage(), (StageData._data.GetStage() + 1) * 3/2);
                 _roomSpawn.SpawnEnemies(_enemiesRemaining);
             }
             else
@@ -61,11 +63,6 @@ public class RoomStatus : MonoBehaviour
             }
         }
         
-    }
-
-    private void OnBecameInvisible()
-    {
-        _currentRoom = false;
     }
 
     public void UpgradeRoom()   // turns room into a boss room

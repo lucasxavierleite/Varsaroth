@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 3533253402897695235}
   - component: {fileID: 246757859756773536}
   - component: {fileID: 8370695413001940610}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door Right
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -600,7 +600,7 @@ GameObject:
   - component: {fileID: 5265658746085813084}
   - component: {fileID: 8142946938665728250}
   - component: {fileID: 230469088323261824}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door Left
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -1095,7 +1095,7 @@ GameObject:
   - component: {fileID: 6416538162931738795}
   - component: {fileID: -6362606121376110458}
   - component: {fileID: 3388086937285927108}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Room URL
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1311,6 +1311,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomVisited: 1
+  _currentRoom: 0
+  _enemiesRemaining: -1
 --- !u!114 &3388086937285927108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1337,7 +1339,7 @@ GameObject:
   - component: {fileID: 1619943819239000447}
   - component: {fileID: 3011533766711802082}
   - component: {fileID: 4714214251585334463}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door Up
   m_TagString: Door
   m_Icon: {fileID: 0}

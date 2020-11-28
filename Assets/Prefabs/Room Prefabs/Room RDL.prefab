@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7584446385207493951}
   - component: {fileID: 6508537530332926018}
   - component: {fileID: -925502267827651399}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Room RDL
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -233,6 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomVisited: 1
+  _currentRoom: 0
+  _enemiesRemaining: -1
 --- !u!114 &-925502267827651399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -544,7 +546,7 @@ GameObject:
   - component: {fileID: 2708372979272314393}
   - component: {fileID: 4499429437111570000}
   - component: {fileID: 5857201168090679929}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door Down
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -762,7 +764,7 @@ GameObject:
   - component: {fileID: 7984215789658734085}
   - component: {fileID: 6677055104976333990}
   - component: {fileID: 3165940284865172100}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door Right
   m_TagString: Door
   m_Icon: {fileID: 0}
@@ -1131,7 +1133,7 @@ GameObject:
   - component: {fileID: 1645610953491584858}
   - component: {fileID: 3369974355965658364}
   - component: {fileID: 6699043563221772678}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Door Left
   m_TagString: Door
   m_Icon: {fileID: 0}

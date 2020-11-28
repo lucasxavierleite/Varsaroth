@@ -8,6 +8,7 @@ public class EnemyController : MonoBehaviour
     public GameObject player; // The target player
     SpriteRenderer _renderer;
     Animator _animator;
+    Collider2D _collider;
 
     public float _walkingDistance = 300.0f; // maximum distance which the enemy will start moving towards the player
 
@@ -44,6 +45,7 @@ public class EnemyController : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         _animator = GetComponentInChildren<Animator>();
         _renderer = GetComponentInChildren<SpriteRenderer>();
+        _collider = GetComponent<Collider2D>();
     }
 
     private void Update()
@@ -136,6 +138,7 @@ public class EnemyController : MonoBehaviour
 
             case STATE_DEAD:
                 _animator.SetBool("dead", true);
+                _collider.enabled = false;
                 break;
 
         }

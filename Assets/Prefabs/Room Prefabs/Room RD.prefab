@@ -999,7 +999,7 @@ GameObject:
   - component: {fileID: 1470950485943004047}
   - component: {fileID: 6927409458765710020}
   - component: {fileID: -7855662282743799907}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Room RD
   m_TagString: Wall
   m_Icon: {fileID: 0}
@@ -1213,6 +1213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _roomVisited: 0
+  _currentRoom: 0
+  _enemiesRemaining: -1
 --- !u!114 &-7855662282743799907
 MonoBehaviour:
   m_ObjectHideFlags: 0
