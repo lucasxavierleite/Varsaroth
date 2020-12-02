@@ -12,6 +12,12 @@ public class MainMenuController : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         
     }
+    
+    public void ExitGame()
+    {
+        Application.Quit();
+        Debug.Log("Game is closing");
+    }
 
 
 }

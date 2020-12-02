@@ -20,7 +20,7 @@ public class GameMenus : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown("escape") && PlayerMovement._currentAnimationState != 4)
         {
             PauseButton();
         } 

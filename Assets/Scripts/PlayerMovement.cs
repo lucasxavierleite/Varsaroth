@@ -54,8 +54,8 @@ public class PlayerMovement : MonoBehaviour
         if (_currentAnimationState != STATE_DEAD && Time.timeScale != 0)
         {
 
-            _attackInb = Input.GetKeyDown("j");
-            _dodgeInb = Input.GetKeyDown("k");
+            _attackInb = Input.GetKeyDown("k");
+            _dodgeInb = Input.GetKeyDown("j");
             if (_attackInb && _currentAnimationState != STATE_DODGE)
             {
 
