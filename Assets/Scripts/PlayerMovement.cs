@@ -61,11 +61,15 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 ChangeState(STATE_ATTACK);
+
+                AudioManager.instance.Play("AtackMiss");
             }
             if (_dodgeInb)
             {
 
                 ChangeState(STATE_DODGE);
+
+                AudioManager.instance.Play("Dodge");
             }
 
             _moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, Input.GetAxis("Vertical") * _moveSpeed, 0);
@@ -74,6 +78,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 MovePlayer(_moveDirection);
             }
+        }
+        if(_currentAnimationState == STATE_WALK){
+            if(AudioManager.instance.isPlaying("Steps") == false){
+                AudioManager.instance.Play("Steps");
+            }
+        }else{
+            AudioManager.instance.Stop("Steps");
         }
     }
 
@@ -186,6 +197,7 @@ public class PlayerMovement : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
+            AudioManager.instance.Play("AtackHit");
             enemy.SendMessageUpwards("TakeDamage");
             enemy.SendMessageUpwards("OnKill");
         }
@@ -256,6 +268,7 @@ public class PlayerMovement : MonoBehaviour
         {
             ChangeState(STATE_DEAD);
             Time.timeScale = 0.5f;
+            AudioManager.instance.Play("PlayerDeath");
         }   
    }
 
@@ -274,6 +287,7 @@ public class PlayerMovement : MonoBehaviour
         System.Random p = new System.Random();
         player_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
         ChangeState(STATE_TAKE_DAMAGE);
+        AudioManager.instance.Play("GettingHit");
     }
 
     /* geters e seters de HP e dano */
