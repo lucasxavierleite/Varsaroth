@@ -61,6 +61,8 @@ public class PlayerMovement : MonoBehaviour
             {
 
                 ChangeState(STATE_ATTACK);
+
+                //FindObjectOfType<AudioManager>().Play("PlayerDeath");
             }
             if (_dodgeInb)
             {
@@ -74,6 +76,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 MovePlayer(_moveDirection);
             }
+        }
+        if(_currentAnimationState == STATE_WALK){
+            if(AudioManager.instance.isPlaying("Steps") == false){
+                AudioManager.instance.Play("Steps");
+            }
+        }else{
+            AudioManager.instance.Stop("Steps");
         }
     }
 
