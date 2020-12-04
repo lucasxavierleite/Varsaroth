@@ -1598,11 +1598,37 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 2a4e97fdc8f621d418dba185f6e578ff, type: 3}
     volume: 0.5
     pitch: 1
+    loop: 0
     source: {fileID: 0}
   - name: Steps
     clip: {fileID: 8300000, guid: 54e57b1ed1efa8f408d189872fe30d1a, type: 3}
     volume: 0.701
     pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtackMiss
+    clip: {fileID: 8300000, guid: ca63089549aab244ebdc1bf46385a3c5, type: 3}
+    volume: 0.505
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Dodge
+    clip: {fileID: 8300000, guid: 3746709d7fdef094caef4a88a4448442, type: 3}
+    volume: 0.505
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AtackHit
+    clip: {fileID: 8300000, guid: d02e2c91ceb480e41a5f643a23a0df83, type: 3}
+    volume: 0.505
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: GettingHit
+    clip: {fileID: 8300000, guid: 3688ff8f73ab857489018e10441c47be, type: 3}
+    volume: 0.505
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &650366146
 Transform:
