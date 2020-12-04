@@ -323,26 +323,32 @@ public class PlayerMovement : MonoBehaviour
     /// <param name="other"> The trigger that the player collided with</param>
     private void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.CompareTag("Door")) // if player in contact with door, move camera
         {
-            if (other.name == "Door Up")
+            Debug.Log(other.name);
+            if (other.name == "Door_Up")
             {
+                Debug.Log(other.name);
                 _playerRB.transform.position += Vector3.up * 90;
                 Camera.main.transform.position += Vector3.up * 216;
 
             }
-            else if (other.name == "Door Down")
+            else if (other.name == "Door_Down")
             {
+                Debug.Log(other.name);
                 _playerRB.transform.position += Vector3.down * 90;
                 Camera.main.transform.position += Vector3.down * 216;
             }
-            else if (other.name == "Door Right")
+            else if (other.name == "Door_Right")
             {
+                Debug.Log(other.name);
                 _playerRB.transform.position += Vector3.right * 100;
                 Camera.main.transform.position += Vector3.right * 384;
             }
-            else if (other.name == "Door Left")
+            else if (other.name == "Door_Left")
             {
+                Debug.Log(other.name);
                 _playerRB.transform.position += Vector3.left * 100;
                 Camera.main.transform.position += Vector3.left * 384;
             }

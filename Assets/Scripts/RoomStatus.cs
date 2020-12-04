@@ -28,8 +28,8 @@ public class RoomStatus : MonoBehaviour
             {
                 if (transform.GetChild(a).tag == "Door")
                 {
-                    transform.GetChild(a).gameObject.SetActive(true); // open doors after all enemies defeated
-                    // transform.GetChild(a).GetComponent<Animator>().SetTrigger("open"); // open doors after all enemies were defetead
+                    //transform.GetChild(a).gameObject.SetActive(true); // open doors after all enemies defeated
+                    transform.GetChild(a).GetComponent<Animator>().SetTrigger("open"); // open doors after all enemies were defetead
                     Debug.Log("Abir porta");
                     transform.GetChild(a).gameObject.layer = 12;
                 }
@@ -40,11 +40,12 @@ public class RoomStatus : MonoBehaviour
     // When room becomes visible, if it hasn't been visited yet, spawn enemies in it
     private void OnBecameVisible()
     {
+        _currentRoom = true;
         if (_roomVisited == false)
         {
             _roomVisited = true;
             gameObject.layer = 12;
-            _currentRoom = true;
+            
 
             if (_isBoss == false)
             {
@@ -52,7 +53,7 @@ public class RoomStatus : MonoBehaviour
                 {
                     if (transform.GetChild(a).tag == "Door")
                     {
-                        transform.GetChild(a).gameObject.SetActive(false);  // close doors while enemies still alive
+                        //transform.GetChild(a).gameObject.SetActive(false);  // close doors while enemies still alive
                         // could change later to another sprite of a closed door
                     }
                 }
