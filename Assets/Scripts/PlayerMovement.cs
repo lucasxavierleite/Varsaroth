@@ -14,7 +14,8 @@ public class PlayerMovement : MonoBehaviour
     const int STATE_WALK = 1;
     const int STATE_ATTACK = 2;
     const int STATE_DODGE = 3;
-    const int STATE_DEAD = 4;
+    const int STATE_DEAD = 4; 
+    const int STATE_TAKE_DAMAGE = 5;
 
     public string _currentDirection = "right";
     public static int _currentAnimationState = STATE_IDLE;
@@ -108,12 +109,14 @@ public class PlayerMovement : MonoBehaviour
         {
             if (direction == "right")
             {
-                _renderer.flipX = false;
+                // _renderer.flipX = false;
+                transform.Rotate(0, -180, 0);
                 _currentDirection = "right";
             }
             else if (direction == "left")
             {
-                _renderer.flipX = true;
+                // _renderer.flipX = true;
+                transform.Rotate(0, 180, 0);
                 _currentDirection = "left";
             }
         }
@@ -151,6 +154,10 @@ public class PlayerMovement : MonoBehaviour
             case STATE_DEAD:
                 _animator.SetBool("dead", true);
                 _collider.enabled = false;
+                break;
+            
+            case STATE_TAKE_DAMAGE:
+                _animator.SetTrigger("take_damage");
                 break;
 
         }
@@ -266,6 +273,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Vida do player = " + player_hp);
         System.Random p = new System.Random();
         player_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
+        ChangeState(STATE_TAKE_DAMAGE);
     }
 
     /* geters e seters de HP e dano */
