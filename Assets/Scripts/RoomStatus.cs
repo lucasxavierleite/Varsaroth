@@ -29,6 +29,8 @@ public class RoomStatus : MonoBehaviour
                 if (transform.GetChild(a).tag == "Door")
                 {
                     transform.GetChild(a).gameObject.SetActive(true); // open doors after all enemies defeated
+                    // transform.GetChild(a).GetComponent<Animator>().SetTrigger("open"); // open doors after all enemies were defetead
+                    Debug.Log("Abir porta");
                     transform.GetChild(a).gameObject.layer = 12;
                 }
             }
