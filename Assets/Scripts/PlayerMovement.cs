@@ -59,10 +59,14 @@ public class PlayerMovement : MonoBehaviour
             _dodgeInb = Input.GetKeyDown("j");
             if (_attackInb && _currentAnimationState != STATE_DODGE)
             {
-
+                if(_currentAnimationState == STATE_WALK || _currentAnimationState == STATE_IDLE){
+                    if(AudioManager.instance.isPlaying("AtackMiss") == false){
+                        AudioManager.instance.Play("AtackMiss");
+                    }   
+                }
                 ChangeState(STATE_ATTACK);
 
-                AudioManager.instance.Play("AtackMiss");
+                
             }
             if (_dodgeInb)
             {
