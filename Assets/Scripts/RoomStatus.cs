@@ -26,7 +26,6 @@ public class RoomStatus : MonoBehaviour
             transform.Find("Torch (5)").gameObject.SetActive(false);
             transform.Find("Torch (6)").gameObject.SetActive(false);
             transform.Find("Torch (7)").gameObject.SetActive(false);
-
         }
     }
 
@@ -40,8 +39,8 @@ public class RoomStatus : MonoBehaviour
             {
                 if (transform.GetChild(a).tag == "Door")
                 {
-                    //transform.GetChild(a).gameObject.SetActive(true); // open doors after all enemies defeated
-                    transform.GetChild(a).GetComponent<Animator>().SetTrigger("open"); // open doors after all enemies were defetead
+                    transform.GetChild(a).GetComponent<Animator>().SetTrigger("open");
+                    transform.GetChild(a).GetComponent<BoxCollider2D>().isTrigger = true; // open doors after all enemies were defetead
                     Debug.Log("Abir porta");
                     transform.GetChild(a).gameObject.layer = 12;
                 }
@@ -73,8 +72,7 @@ public class RoomStatus : MonoBehaviour
                 {
                     if (transform.GetChild(a).tag == "Door")
                     {
-                        //transform.GetChild(a).gameObject.SetActive(false);  // close doors while enemies still alive
-                        // could change later to another sprite of a closed door
+                        transform.GetChild(a).GetComponent<BoxCollider2D>().isTrigger = false; // close doors while enemies are still alive
                     }
                 }
                 _enemiesRemaining = Random.Range(StageData._data.GetStage(), (StageData._data.GetStage() + 1) * 3/2);
