@@ -1563,7 +1563,7 @@ MonoBehaviour:
   - {fileID: 5292529670291318963, guid: f8e2492c1420f944f8c75b3a2bb8c600, type: 3}
   - {fileID: 6516116757761015536, guid: 59df13b0e3de5244f8f06cd5a1e774d4, type: 3}
   - {fileID: 7075602670593465461, guid: 27ef3c17fce93d044b3dafd4f53bba99, type: 3}
-  _nextFloor: {fileID: 4391736735243209412, guid: 928f8a4f70f20dd4094169e977925969,
+  _nextFloor: {fileID: 1553480830657398116, guid: c3dd57e319bf880f7bfc5972d17607dd,
     type: 3}
   _minimumSize: 0
   _leftToSpawn: 15
