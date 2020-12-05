@@ -3034,7 +3034,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1194208445, guid: 6fb0e2f14baed0c928f42a4abdb90f40, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1952886412, guid: 6fb0e2f14baed0c928f42a4abdb90f40, type: 3}
+      propertyPath: m_Name
+      value: attackPoint
       objectReference: {fileID: 0}
     - target: {fileID: 1269457372256377513, guid: 6fb0e2f14baed0c928f42a4abdb90f40,
         type: 3}
