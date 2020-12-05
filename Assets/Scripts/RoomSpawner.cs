@@ -151,28 +151,28 @@ public class RoomSpawner : MonoBehaviour
             // if the room it is colliding with does not have a door leading into this room, delete this door
             if (_openingDirection == 1)
             {
-                if (other.transform.parent.Find("Door Down") == null)
+                if (other.transform.parent.Find("Door_Down") == null)
                 {
                     Destroy(_door);
                 }
             }
             else if (_openingDirection == 2)
             {
-                if (other.transform.parent.Find("Door Up") == null)
+                if (other.transform.parent.Find("Door_Up") == null)
                 {
                     Destroy(_door);
                 }
             }
             else if (_openingDirection == 3)
             {
-                if (other.transform.parent.Find("Door Left") == null)
+                if (other.transform.parent.Find("Door_Left") == null)
                 {
                     Destroy(_door);
                 }
             }
             else if (_openingDirection == 4)
             {
-                if (other.transform.parent.Find("Door Right") == null)
+                if (other.transform.parent.Find("Door_Right") == null)
                 {
                     Destroy(_door);
                 }
