@@ -27,6 +27,7 @@ public class EnemyController : MonoBehaviour
     const int STATE_WALK = 1;
     const int STATE_ATTACK = 2;
     const int STATE_DEAD = 3;
+    const int STATE_TAKE_DAMAGE = 4;
 
     private int damage = 30; // dano que um inimigo recebe a cada golpe (por padrao e 30)
 
@@ -140,7 +141,10 @@ public class EnemyController : MonoBehaviour
                 _animator.SetBool("dead", true);
                 _collider.enabled = false;
                 break;
-
+            
+            case STATE_TAKE_DAMAGE:
+                _animator.SetTrigger("take_damage");
+                break;
         }
 
         _currentAnimationState = state;
@@ -193,6 +197,7 @@ public class EnemyController : MonoBehaviour
     public void TakeDamage(){
         System.Random p = new System.Random();
         enemy_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
+        ChangeState(STATE_TAKE_DAMAGE);
         Debug.Log("Vida do inimigo = " + enemy_hp);
     }
 

@@ -35,7 +35,7 @@ public class PlayerMovement : MonoBehaviour
     public bool _isInvulnerable;
 
 
-    public Transform[] _attackPoint;
+    public Transform _attackPoint;
     public float _attackRange = 10f;
     public LayerMask _enemyLayers;
 
@@ -179,7 +179,6 @@ public class PlayerMovement : MonoBehaviour
             case STATE_TAKE_DAMAGE:
                 _animator.SetTrigger("take_damage");
                 break;
-
         }
 
         _currentAnimationState = state;
@@ -193,17 +192,9 @@ public class PlayerMovement : MonoBehaviour
         Collider2D[] _enemiesHit;
 
         //detect enemies hit
-        if (_currentDirection == "right")
-        {
-            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[0].position, _attackRange, _enemyLayers);
-        }
-        else
-        {
-            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[1].position, _attackRange, _enemyLayers);
-        }
-        
-        
-        //damage enemies hit, for now kills them
+        _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint.position, _attackRange, _enemyLayers);
+
+        //damage enemies hit
         foreach (Collider2D enemy in _enemiesHit)
         {
             AudioManager.instance.Play("AtackHit");
@@ -214,8 +205,7 @@ public class PlayerMovement : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         if (_attackPoint == null) return;
-        Gizmos.DrawWireSphere(_attackPoint[0].position, _attackRange);
-        Gizmos.DrawWireSphere(_attackPoint[1].position, _attackRange);
+        Gizmos.DrawWireSphere(_attackPoint.position, _attackRange);
     }
 
     /// <summary>

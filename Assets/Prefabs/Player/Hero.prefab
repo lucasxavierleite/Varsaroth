@@ -1,35 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &220000263
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 220000264}
-  m_Layer: 10
-  m_Name: attackPointLeft
-  m_TagString: Player
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &220000264
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 220000263}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.51079, y: -0.6620347, z: -2.2229652}
-  m_LocalScale: {x: 0.33436096, y: 0.33436096, z: 0.33436096}
-  m_Children: []
-  m_Father: {fileID: 1269457372847503207}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1194208445
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1.6718048, y: 1.6718048, z: 0.33436096}
   m_Children: []
   m_Father: {fileID: 1269457372847503207}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1194208447
 SpriteRenderer:
@@ -121,7 +91,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1952886413}
   m_Layer: 10
-  m_Name: attackPointRight
+  m_Name: attackPoint
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -783,7 +753,6 @@ Transform:
   - {fileID: 1269457372279937344}
   - {fileID: 1269457373480612444}
   - {fileID: 1952886413}
-  - {fileID: 220000264}
   - {fileID: 1194208446}
   - {fileID: 1068670302126488340}
   m_Father: {fileID: 0}
@@ -862,9 +831,7 @@ MonoBehaviour:
   _currentDirection: right
   _dashSpeed: 280
   _isInvulnerable: 0
-  _attackPoint:
-  - {fileID: 1952886413}
-  - {fileID: 220000264}
+  _attackPoint: {fileID: 1952886413}
   _attackRange: 10
   _enemyLayers:
     serializedVersion: 2
@@ -1883,7 +1850,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1269457372847503207}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &75338586537919474
 MonoBehaviour:
