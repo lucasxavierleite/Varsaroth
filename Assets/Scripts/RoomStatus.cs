@@ -16,6 +16,18 @@ public class RoomStatus : MonoBehaviour
     private void Start()
     {
         _roomSpawn = GetComponentInParent<EnemySpawner>();
+        if (_roomVisited == false)
+        {
+            transform.Find("Torch").gameObject.SetActive(false);
+            transform.Find("Torch (1)").gameObject.SetActive(false);
+            transform.Find("Torch (2)").gameObject.SetActive(false);
+            transform.Find("Torch (3)").gameObject.SetActive(false);
+            transform.Find("Torch (4)").gameObject.SetActive(false);
+            transform.Find("Torch (5)").gameObject.SetActive(false);
+            transform.Find("Torch (6)").gameObject.SetActive(false);
+            transform.Find("Torch (7)").gameObject.SetActive(false);
+
+        }
     }
 
     private void Update()
@@ -45,7 +57,15 @@ public class RoomStatus : MonoBehaviour
         {
             _roomVisited = true;
             gameObject.layer = 12;
-            
+
+            transform.Find("Torch").gameObject.SetActive(true);
+            transform.Find("Torch (1)").gameObject.SetActive(true);
+            transform.Find("Torch (2)").gameObject.SetActive(true);
+            transform.Find("Torch (3)").gameObject.SetActive(true);
+            transform.Find("Torch (4)").gameObject.SetActive(true);
+            transform.Find("Torch (5)").gameObject.SetActive(true);
+            transform.Find("Torch (6)").gameObject.SetActive(true);
+            transform.Find("Torch (7)").gameObject.SetActive(true);
 
             if (_isBoss == false)
             {

@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
 {
     Rigidbody2D _playerRB;
     Vector3 _moveDirection;
-    float _moveSpeed = 250f;
+    float _moveSpeed = 100f;
 
     //player states
     const int STATE_IDLE = 0;
@@ -71,6 +71,11 @@ public class PlayerMovement : MonoBehaviour
 
                 AudioManager.instance.Play("Dodge");
             }
+        }
+    }
+
+    private void FixedUpdate()
+    {
 
             _moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, Input.GetAxis("Vertical") * _moveSpeed, 0);
 
@@ -78,7 +83,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 MovePlayer(_moveDirection);
             }
-        }
+        
         if(_currentAnimationState == STATE_WALK){
             if(AudioManager.instance.isPlaying("Steps") == false){
                 AudioManager.instance.Play("Steps");
@@ -215,11 +220,8 @@ public class PlayerMovement : MonoBehaviour
     void StopAttack()
     {
         //disable sword hitbox
-        if (_currentAnimationState == STATE_ATTACK)
-        {
-            ChangeState(STATE_IDLE);
-        }
-        
+        ChangeState(STATE_IDLE);
+
     }
 
     /// <summary>
