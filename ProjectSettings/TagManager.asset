@@ -11,6 +11,7 @@ TagManager:
   - Destroyer
   - Enemy
   - TrapDoor
+  - Light
   layers:
   - Default
   - TransparentFX
