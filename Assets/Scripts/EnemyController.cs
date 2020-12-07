@@ -39,10 +39,11 @@ public class EnemyController : MonoBehaviour
     public float _attackCircle = 5f;
     public LayerMask _enemyLayers;
 
+	[SerializeField]
+	private GameObject _enemyIcon;
 
     private void Start()
     {
-
         player = GameObject.FindWithTag("Player");
         _animator = GetComponentInChildren<Animator>();
         _renderer = GetComponentInChildren<SpriteRenderer>();
@@ -235,6 +236,8 @@ public class EnemyController : MonoBehaviour
         if(enemy_hp <= 0){
             ChangeState(STATE_DEAD);
             GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
+			_enemyIcon.SetActive(false); 
+
             foreach (GameObject room in rooms)
             {
                 _temporaryRoom = room.GetComponent<RoomStatus>();

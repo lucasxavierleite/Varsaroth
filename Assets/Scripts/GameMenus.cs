@@ -9,12 +9,12 @@ public class GameMenus : MonoBehaviour
     [SerializeField]
     GameObject deathScreen = null;
     [SerializeField]
-    GameObject playerUI = null;
+    GameObject HUD = null;
 
     // Start is called before the first frame update
     void Start()
     {
-        playerUI.SetActive(true);
+        HUD.SetActive(true);
         ContinueButton();
     }
 
@@ -28,11 +28,14 @@ public class GameMenus : MonoBehaviour
         {
             DeathButton();
         }
+		if (Input.GetKeyDown(KeyCode.Quote))
+		{
+			ToggleHUDButton();
+		}
     }
 
     public void PauseButton()   //pause or unpause game
     {
-
         if (!pauseScreen.activeSelf) // if not paused, pause
         {
             Time.timeScale = 0;
@@ -42,7 +45,6 @@ public class GameMenus : MonoBehaviour
         {
             ContinueButton();
         }
-
     }
 
     public void ContinueButton()    // unpause game
@@ -50,12 +52,11 @@ public class GameMenus : MonoBehaviour
         pauseScreen.SetActive(false);
         deathScreen.SetActive(false);
         Time.timeScale = 1;
-
     }
 
     public void DeathButton()
     {
-        playerUI.SetActive(false);
+        HUD.SetActive(false);
         deathScreen.SetActive(true);
     }
 
@@ -65,4 +66,16 @@ public class GameMenus : MonoBehaviour
         deathScreen.SetActive(false);
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");
     }
+
+	public void ToggleHUDButton()
+	{
+		if (!HUD.activeSelf) // if hidden, show
+        {
+            HUD.SetActive(true);
+        }
+        else // if not hidden, hide
+        {
+            HUD.SetActive(false);
+        }
+	}
 }

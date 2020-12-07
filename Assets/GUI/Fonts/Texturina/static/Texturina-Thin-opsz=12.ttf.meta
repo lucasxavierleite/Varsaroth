@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: 294f84f170e12a6108428f87af3201b5
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Texturina 12pt
+  fontNames:
+  - Texturina 12pt
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a0f530303a51dacff9312d443077a09d, type: 3}
+  - {fileID: 12800000, guid: 29d4ab2143759f69db21c6b18dd59402, type: 3}
+  - {fileID: 12800000, guid: d57ea463c1b5005b584e26bb2181fd62, type: 3}
+  - {fileID: 12800000, guid: 097b74340c907d382aa96de098a9d07d, type: 3}
+  - {fileID: 12800000, guid: f03561a5baee4276d9fcf3a68fb6ce97, type: 3}
+  - {fileID: 12800000, guid: e53582bb83db97e8285246a637ce99e2, type: 3}
+  - {fileID: 12800000, guid: 53ade61c20ed8ce74ab609f6ab8f1636, type: 3}
+  - {fileID: 12800000, guid: f75d048e9dfef9e4ab8ac6d4a654ab64, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,27 @@
+fileFormatVersion: 2
+guid: f8a6edbecfb3c2aec84d032802b2de62
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Roboto Slab
+  fontNames:
+  - Roboto Slab
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b62dfd916d3e31746a63f0295c3c2f5b, type: 3}
+  - {fileID: 12800000, guid: 78409986cb46b43d5892ecf010d7f6cc, type: 3}
+  - {fileID: 12800000, guid: 735e27c61820494e79d986a9eac785d2, type: 3}
+  - {fileID: 12800000, guid: f6f78f6db3fec329e8c566c40e4e532a, type: 3}
+  - {fileID: 12800000, guid: 00a085cd7b70ec173be11806c767ac7f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

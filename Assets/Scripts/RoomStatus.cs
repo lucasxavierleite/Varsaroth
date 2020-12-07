@@ -41,7 +41,6 @@ public class RoomStatus : MonoBehaviour
                 {
                     transform.GetChild(a).GetComponent<Animator>().SetTrigger("open");
                     transform.GetChild(a).GetComponent<BoxCollider2D>().isTrigger = true; // open doors after all enemies were defetead
-                    Debug.Log("Abir porta");
                     transform.GetChild(a).gameObject.layer = 12;
                 }
             }

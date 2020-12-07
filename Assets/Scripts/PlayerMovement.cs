@@ -39,6 +39,9 @@ public class PlayerMovement : MonoBehaviour
     public float _attackRange = 10f;
     public LayerMask _enemyLayers;
 
+    [SerializeField]
+    private HpBar _hpBar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -48,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
         _isInvulnerable = false;
+        _hpBar.SetMaxHp(player_hp);
     }
 
     private void Update()
@@ -282,6 +286,7 @@ public class PlayerMovement : MonoBehaviour
         Debug.Log("Vida do player = " + player_hp);
         System.Random p = new System.Random();
         player_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
+        _hpBar.SetHp(player_hp);
         ChangeState(STATE_TAKE_DAMAGE);
         AudioManager.instance.Play("GettingHit");
     }
@@ -302,8 +307,6 @@ public class PlayerMovement : MonoBehaviour
     public void setDamage(int dam){
         damage = dam;
     }
-
-
 
     public void setDifficulty(int d){
         switch(d){
