@@ -31,7 +31,7 @@ public class EnemyController : MonoBehaviour
 
     private int damage = 30; // dano que um inimigo recebe a cada golpe (por padrao e 30)
 
-    private int enemy_hp = 90;
+    private int enemy_hp = 100;
 
     public int _currentAnimationState = STATE_IDLE;
 
@@ -197,7 +197,7 @@ public class EnemyController : MonoBehaviour
     /* Funcao do inimigo de receber dano */
     public void TakeDamage(){
         System.Random p = new System.Random();
-        enemy_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
+        enemy_hp -= 25; // takes 4 hits to die
         ChangeState(STATE_TAKE_DAMAGE);
         Debug.Log("Vida do inimigo = " + enemy_hp);
     }
