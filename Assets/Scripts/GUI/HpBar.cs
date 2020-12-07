@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class HpBar : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class HpBar : MonoBehaviour
 	private Slider _slider;
 	
 	[SerializeField]
-	private Text _text;
+	private TextMeshProUGUI _text;
 
     public void SetMaxHp(int maxHp) {
 		_slider.maxValue = maxHp;

@@ -1,20 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameMenus : MonoBehaviour
 {
     [SerializeField]
     GameObject pauseScreen = null;
+    
     [SerializeField]
     GameObject deathScreen = null;
+
     [SerializeField]
-    GameObject HUD = null;
+    private Color32 menuItemDefaultColor;
+    
+    [SerializeField]
+    private Color32 menuItemHighlightColor;
+
+    [SerializeField]
+    private GameObject volume;
 
     // Start is called before the first frame update
     void Start()
     {
-        HUD.SetActive(true);
         ContinueButton();
     }
 
@@ -28,10 +36,6 @@ public class GameMenus : MonoBehaviour
         {
             DeathButton();
         }
-		if (Input.GetKeyDown(KeyCode.Quote))
-		{
-			ToggleHUDButton();
-		}
     }
 
     public void PauseButton()   //pause or unpause game
@@ -39,11 +43,13 @@ public class GameMenus : MonoBehaviour
         if (!pauseScreen.activeSelf) // if not paused, pause
         {
             Time.timeScale = 0;
+            volume.SetActive(true);
             pauseScreen.SetActive(true);
         }
         else // if paused, unpause
         {
             ContinueButton();
+            volume.SetActive(false);
         }
     }
 
@@ -51,12 +57,13 @@ public class GameMenus : MonoBehaviour
     {
         pauseScreen.SetActive(false);
         deathScreen.SetActive(false);
+        volume.SetActive(false);
         Time.timeScale = 1;
     }
 
     public void DeathButton()
     {
-        HUD.SetActive(false);
+        volume.SetActive(true);
         deathScreen.SetActive(true);
     }
 
@@ -67,15 +74,13 @@ public class GameMenus : MonoBehaviour
         UnityEngine.SceneManagement.SceneManager.LoadScene("Main Menu");
     }
 
-	public void ToggleHUDButton()
-	{
-		if (!HUD.activeSelf) // if hidden, show
-        {
-            HUD.SetActive(true);
-        }
-        else // if not hidden, hide
-        {
-            HUD.SetActive(false);
-        }
-	}
+    public void MenuButtonPointerEnter(TextMeshProUGUI text)
+    {
+        text.color = menuItemHighlightColor;
+    }
+    
+    public void MenuButtonPointerExit(TextMeshProUGUI text)
+    {
+        text.color = menuItemDefaultColor;
+    }
 }
