@@ -26,6 +26,7 @@ public class RoomStatus : MonoBehaviour
             transform.Find("Torch (5)").gameObject.SetActive(false);
             transform.Find("Torch (6)").gameObject.SetActive(false);
             transform.Find("Torch (7)").gameObject.SetActive(false);
+			transform.Find("Light").gameObject.SetActive(false);
         }
     }
 
@@ -64,6 +65,7 @@ public class RoomStatus : MonoBehaviour
             transform.Find("Torch (5)").gameObject.SetActive(true);
             transform.Find("Torch (6)").gameObject.SetActive(true);
             transform.Find("Torch (7)").gameObject.SetActive(true);
+			transform.Find("Light").gameObject.SetActive(true);
 
             if (_isBoss == false)
             {
