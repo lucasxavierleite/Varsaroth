@@ -236,7 +236,7 @@ public class PlayerMovement : MonoBehaviour
         {
             _playerRB.velocity = Vector2.left * _dashSpeed;
         }
-        
+        ToggleInvulnerability();
     }
     /// <summary>
     /// Stops dodge ability
@@ -245,6 +245,7 @@ public class PlayerMovement : MonoBehaviour
     {   
         _playerRB.velocity = Vector2.zero;
         ChangeState(STATE_IDLE);
+        ToggleInvulnerability();
     }
 
     /// <summary>
@@ -285,8 +286,7 @@ public class PlayerMovement : MonoBehaviour
     /* Funcao do player de receber dano */
     public void TakeDamage(){
         Debug.Log("Vida do player = " + player_hp);
-        System.Random p = new System.Random();
-        player_hp -= (int)((float)damage*((float)p.Next(60, 100)/100.0));
+        player_hp -= 20; //takes 5 hits to die
         _hpBar.SetHp(player_hp);
         ChangeState(STATE_TAKE_DAMAGE);
         AudioManager.instance.Play("GettingHit");
