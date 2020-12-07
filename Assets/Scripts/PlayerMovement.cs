@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _attackInb;
     private bool _dodgeInb;
 
-    private int player_hp = 200;
+    private int player_hp = StageData._data.GetHP(); // StageData script holds global hp and max hp values
 
     private int damage = 10; // dano que ele recebe a cada golpe (por padrao e 10)
 
@@ -51,7 +51,8 @@ public class PlayerMovement : MonoBehaviour
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
         _isInvulnerable = false;
-        _hpBar.SetMaxHp(player_hp);
+        _hpBar.SetMaxHp((StageData._data.GetMAXHP()));
+        _hpBar.SetHp(player_hp);
     }
 
     private void Update()
@@ -289,6 +290,9 @@ public class PlayerMovement : MonoBehaviour
         _hpBar.SetHp(player_hp);
         ChangeState(STATE_TAKE_DAMAGE);
         AudioManager.instance.Play("GettingHit");
+
+        StageData._data.SetHP(player_hp);
+
     }
 
     /* geters e seters de HP e dano */

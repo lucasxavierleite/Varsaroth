@@ -16,6 +16,8 @@ public class RoomTemplates : MonoBehaviour
     public GameObject[] StartRoom;
     [SerializeField]
     public GameObject _nextFloor;
+    [SerializeField]
+    public GameObject _King;
 
     public int _minimumSize;
     public int _leftToSpawn;
@@ -26,7 +28,16 @@ public class RoomTemplates : MonoBehaviour
         int _rand = Random.Range(0, StartRoom.Length);
         Debug.Log(_rand);
         Instantiate(StartRoom[_rand], transform.position, Quaternion.identity);
-        Invoke("SpawnGate", 2f);
+
+        if (StageData._data.GetStage() != 5)
+        {
+            Invoke("SpawnGate", 2f);
+        }
+        else
+        {
+            Invoke("SpawnKing", 2f);
+        }
+            
 
         _leftToSpawn = 13 + 2 * StageData._data.GetStage();
         _minimumSize = 2 * StageData._data.GetStage();
@@ -38,6 +49,12 @@ public class RoomTemplates : MonoBehaviour
     void SpawnGate()
     {
         Instantiate(_nextFloor,_rooms[_rooms.Count - 1].transform.position, Quaternion.identity);
+        _rooms[_rooms.Count - 1].SendMessage("UpgradeRoom");
+    }
+
+    void SpawnKing()
+    {
+        //Instantiate(_King, _rooms[_rooms.Count - 1].transform.position, Quaternion.identity);
         _rooms[_rooms.Count - 1].SendMessage("UpgradeRoom");
     }
 }
