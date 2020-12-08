@@ -16,8 +16,8 @@ public class Enemy2Controller : MonoBehaviour
 
     public bool _canMove = false; // Indicates if monster can move
 
-    private float _attackRange = 20.0f;
-    private float _attackSpeed = 250.0f;
+    private float _attackRange = 40.0f;
+    private float _attackSpeed = 500.0f;
     private int enemy_hp = 50;
 
     RoomStatus _temporaryRoom;
@@ -51,9 +51,9 @@ public class Enemy2Controller : MonoBehaviour
 
     private void Update()
     {
-        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != 4)
+        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != STATE_TAKE_DAMAGE && _currentAnimationState != STATE_ATTACK)
         {
-            if (_canMove == true && _currentAnimationState != STATE_ATTACK)
+            if (_canMove == true)
             {
                 ChangeState(STATE_WALK);
                 MoveTowardsPlayer();
@@ -70,7 +70,7 @@ public class Enemy2Controller : MonoBehaviour
             }
 
             float distanceX = Mathf.Abs(transform.position.x - player.transform.position.x);
-            float distanceY = (transform.position.y - player.transform.position.y);
+            float distanceY = - (transform.position.y - player.transform.position.y);
             //move enemy
             if (distanceX < _walkingDistance && distanceX > _attackRange)
             {
@@ -92,7 +92,7 @@ public class Enemy2Controller : MonoBehaviour
 
     void MoveVertically(float direction)
     {
-        transform.position = Vector2.MoveTowards(transform.position, transform.position + Vector3.up * direction, speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, transform.position + Vector3.up * direction, (speed/2) * Time.deltaTime);
     }
 
     void MoveTowardsPlayer()
