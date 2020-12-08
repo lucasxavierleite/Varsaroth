@@ -169,8 +169,7 @@ public class EnemyController : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
-            enemy.SendMessageUpwards("TakeDamage");
-            enemy.SendMessageUpwards("OnKill");
+            enemy.SendMessageUpwards("TakeDamage", 30);
         }
     }
 
@@ -195,11 +194,16 @@ public class EnemyController : MonoBehaviour
     }
 
     /* Funcao do inimigo de receber dano */
-    public void TakeDamage(){
+    public void TakeDamage(int damTaken){
         System.Random p = new System.Random();
-        enemy_hp -= 25; // takes 4 hits to die
+        enemy_hp -= damTaken;
         ChangeState(STATE_TAKE_DAMAGE);
         Debug.Log("Vida do inimigo = " + enemy_hp);
+
+        if (enemy_hp <= 0)
+        {
+            OnKill();
+        }
     }
 
     
@@ -233,21 +237,20 @@ public class EnemyController : MonoBehaviour
 
     void OnKill() // on enemy killed, reduce amount of remaining enemies
     {
-        if(enemy_hp <= 0){
-            ChangeState(STATE_DEAD);
-            GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
-			_enemyIcon.SetActive(false); 
 
-            foreach (GameObject room in rooms)
+        ChangeState(STATE_DEAD);
+        GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
+		_enemyIcon.SetActive(false); 
+
+        foreach (GameObject room in rooms)
+        {
+            _temporaryRoom = room.GetComponent<RoomStatus>();
+            if (_temporaryRoom._currentRoom == true)
             {
-                _temporaryRoom = room.GetComponent<RoomStatus>();
-                if (_temporaryRoom._currentRoom == true)
-                {
-                    _temporaryRoom._enemiesRemaining--;
-                    break;
-                }
-                
+                _temporaryRoom._enemiesRemaining--;
+                break;
             }
+                
         }
     }
 }

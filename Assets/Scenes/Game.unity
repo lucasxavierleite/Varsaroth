@@ -2470,11 +2470,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 889988814}
+      objectReference: {fileID: 889988815}
     - target: {fileID: 5881172693125987467, guid: 4f49b9d5945f8d831943a5d0244e26d8,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: RestartGame
       objectReference: {fileID: 0}
     - target: {fileID: 5881172693125987468, guid: 4f49b9d5945f8d831943a5d0244e26d8,
         type: 3}
@@ -5146,6 +5146,7 @@ GameObject:
   - component: {fileID: 2081232168}
   - component: {fileID: 2081232170}
   - component: {fileID: 2081232169}
+  - component: {fileID: 2081232171}
   m_Layer: 5
   m_Name: MinimapPos
   m_TagString: Untagged
@@ -5206,6 +5207,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2081232167}
   m_CullTransparentMesh: 0
+--- !u!114 &2081232171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081232167}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef109a5f4f1d4843ac8b509ff6384b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minimapCam: {fileID: 1510512898}
 --- !u!1 &2134570066
 GameObject:
   m_ObjectHideFlags: 0
@@ -6008,6 +6022,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 1337913869, guid: 6fb0e2f14baed0c928f42a4abdb90f40, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6fb0e2f14baed0c928f42a4abdb90f40, type: 3}
+--- !u!1 &1269457373037320258 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1269457372847503205, guid: 6fb0e2f14baed0c928f42a4abdb90f40,
+    type: 3}
+  m_PrefabInstance: {fileID: 1269457373037320257}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4024374520952161940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6144,5 +6164,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7263717227725600028, guid: c9bc81759fcab4245889040bc3efe39c,
+        type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1269457373037320258}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9bc81759fcab4245889040bc3efe39c, type: 3}
