@@ -42,6 +42,7 @@ public class GameMenus : MonoBehaviour
     {
         if (!pauseScreen.activeSelf) // if not paused, pause
         {
+            ShowCursor();
             Time.timeScale = 0;
             volume.SetActive(true);
             pauseScreen.SetActive(true);
@@ -49,12 +50,12 @@ public class GameMenus : MonoBehaviour
         else // if paused, unpause
         {
             ContinueButton();
-            volume.SetActive(false);
         }
     }
 
     public void ContinueButton()    // unpause game
     {
+        HideCursor();
         pauseScreen.SetActive(false);
         deathScreen.SetActive(false);
         volume.SetActive(false);
@@ -63,6 +64,7 @@ public class GameMenus : MonoBehaviour
 
     public void DeathButton()
     {
+        ShowCursor();
         volume.SetActive(true);
         deathScreen.SetActive(true);
     }
@@ -82,5 +84,17 @@ public class GameMenus : MonoBehaviour
     public void MenuButtonPointerExit(TextMeshProUGUI text)
     {
         text.color = menuItemDefaultColor;
+    }
+
+    public void ShowCursor()
+    {
+        // Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
+    }
+    
+    public void HideCursor()
+    {
+        // Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }
