@@ -1926,50 +1926,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3939312976217061729, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3939312976217061729, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 3992020470019493832, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3992020470019493832, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0.06
-      objectReference: {fileID: 0}
     - target: {fileID: 5292910212414882421, guid: fe90e9f07ecb6efa89232e1059bfdb28,
         type: 3}
       propertyPath: m_Name
-      value: Light
-      objectReference: {fileID: 0}
-    - target: {fileID: 7998067927629748725, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7998067927629748725, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 8590765699711774419, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_Intensity
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8590765699711774419, guid: fe90e9f07ecb6efa89232e1059bfdb28,
-        type: 3}
-      propertyPath: m_LightVolumeOpacity
-      value: 0.06
+      value: Backlight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe90e9f07ecb6efa89232e1059bfdb28, type: 3}

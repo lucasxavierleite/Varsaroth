@@ -27,7 +27,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: 0, y: 0, z: -58.589005}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -36,7 +36,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 0, y: 0, z: -74.482}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -45,25 +45,25 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: {x: 0, y: 0, z: -71.978004}
-        inSlope: {x: 0, y: 0, z: 31.629446}
-        outSlope: {x: 0, y: 0, z: 31.629446}
+        inSlope: {x: 0, y: 0, z: 40.063965}
+        outSlope: {x: 0, y: 0, z: 40.063965}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: {x: 0, y: 0, z: -33.672}
-        inSlope: {x: 0, y: 0, z: 66.16889}
-        outSlope: {x: 0, y: 0, z: 66.16889}
+        inSlope: {x: 0, y: 0, z: 89.32802}
+        outSlope: {x: 0, y: 0, z: 89.32802}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: 0, y: 0, z: -26.228}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -72,7 +72,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: -80.466}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -83,7 +83,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -97,16 +97,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: 0, y: 0, z: 0.61600006}
-        inSlope: {x: 0, y: 0, z: 3.145532}
-        outSlope: {x: 0, y: 0, z: 3.145532}
+        inSlope: {x: 0, y: 0, z: 4.2240005}
+        outSlope: {x: 0, y: 0, z: 4.2240005}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: {x: 0, y: 0, z: 41.534}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -115,7 +115,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -126,7 +126,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -140,7 +140,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: 0, y: 0, z: -40.778004}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -149,16 +149,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 0, y: 0, z: -393.219}
-        inSlope: {x: 0, y: 0, z: -82.13155}
-        outSlope: {x: 0, y: 0, z: -82.13155}
+        inSlope: {x: 0, y: 0, z: -107.797676}
+        outSlope: {x: 0, y: 0, z: -107.797676}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: 0, y: 0, z: -407.592}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -167,7 +167,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: -42.469}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -178,7 +178,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso
+    path: enemy2/Torso
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -192,7 +192,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: {x: 0, y: 0, z: -4.425}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -201,7 +201,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 0, y: 0, z: 85.985}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -210,16 +210,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: {x: 0, y: 0, z: 9.67}
-        inSlope: {x: 0, y: 0, z: -48.350006}
-        outSlope: {x: 0, y: 0, z: -48.350006}
+        inSlope: {x: 0, y: 0, z: -80.027596}
+        outSlope: {x: 0, y: 0, z: -80.027596}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -230,7 +230,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -244,7 +244,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 0, y: -0.0050000004, z: -96.776}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -253,7 +253,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: -0.006, z: -94.212006}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -264,7 +264,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -278,7 +278,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: {x: 0, y: 0, z: -33.249}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -287,7 +287,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: -2.7800002, y: -1.2570001, z: 35.691}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -296,7 +296,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -307,7 +307,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Tail_IK
+    path: enemy2/Tail_IK
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -321,16 +321,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 0, y: 0, z: 9.456}
-        inSlope: {x: 0, y: 0, z: 48.37583}
-        outSlope: {x: 0, y: 0, z: 48.37583}
+        inSlope: {x: 0, y: 0, z: 64.501114}
+        outSlope: {x: 0, y: 0, z: 64.501114}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: 0, y: 0, z: 38.7}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -339,7 +339,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: -19.351002}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -350,7 +350,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -364,7 +364,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 0, y: 0, z: -1.3900001}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -373,16 +373,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
-        value: {x: 0, y: 0, z: 5.9150004}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -407,7 +398,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: {x: 0, y: 0, z: 15.185}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -416,7 +407,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: {x: 0, y: 0, z: -7.0660005}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -425,7 +416,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 0, y: 0, z: 8.029}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -436,14 +427,14 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Head_IK
+    path: enemy2/Head_IK
   m_PositionCurves:
   - curve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -0.63, y: 0, z: 0}
+        value: {x: -0.63, y: -40.6, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -451,44 +442,35 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
-        value: {x: -0.82, y: 1.13, z: 0}
-        inSlope: {x: -1.0857143, y: 6.4571433, z: 0}
-        outSlope: {x: -1.0857143, y: 6.4571433, z: 0}
+        time: 0.36666667
+        value: {x: 1, y: -32.6, z: 0}
+        inSlope: {x: 12.619356, y: 27.096771, z: 0}
+        outSlope: {x: 12.619356, y: 27.096771, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
-        value: {x: -12.357353, y: 7.19331, z: 0}
-        inSlope: {x: -49.307148, y: 24.578573, z: 0}
-        outSlope: {x: -49.307148, y: 24.578573, z: 0}
+        time: 0.51666665
+        value: {x: 7.4, y: -26.6, z: 0}
+        inSlope: {x: 61.714294, y: 0, z: 0}
+        outSlope: {x: 61.714294, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.96666664
-        value: {x: -23.83, y: 12.6, z: 0}
-        inSlope: {x: -3.8978605, y: 0, z: 0}
-        outSlope: {x: -3.8978605, y: 0, z: 0}
+        time: 0.71666664
+        value: {x: 22.6, y: -27.8, z: 0}
+        inSlope: {x: 67.034485, y: -9.931025, z: 0}
+        outSlope: {x: 67.034485, y: -9.931025, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
-        value: {x: -24.317232, y: 2.6549644, z: 0}
-        inSlope: {x: -3.6542413, y: -19.912235, z: 0}
-        outSlope: {x: -3.6542413, y: -19.912235, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 1.5
-        value: {x: -28.6, y: 0, z: 0}
+        time: 1
+        value: {x: 39.8, y: -41.7, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -512,25 +494,25 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: -1.97, y: -2.47, z: 0}
-        inSlope: {x: 0, y: -1.6571428, z: 0}
-        outSlope: {x: 0, y: -1.6571428, z: 0}
+        inSlope: {x: 0, y: -2.245161, z: 0}
+        outSlope: {x: 0, y: -2.245161, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: -0.83, y: -3.4, z: 0}
-        inSlope: {x: 16.094118, y: -13.129411, z: 0}
-        outSlope: {x: 16.094118, y: -13.129411, z: 0}
+        inSlope: {x: 21.046158, y: -17.169233, z: 0}
+        outSlope: {x: 21.046158, y: -17.169233, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: {x: 4.1, y: -8.96, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -539,7 +521,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: -0.86, y: -2.18, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -550,7 +532,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -564,16 +546,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: {x: -5.4626107, y: -2.3579814, z: 0}
-        inSlope: {x: 2.0599995, y: -0.059999943, z: 0}
-        outSlope: {x: 2.0599995, y: -0.059999943, z: 0}
+        inSlope: {x: 2.8090901, y: -0.081818104, z: 0}
+        outSlope: {x: 2.8090901, y: -0.081818104, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: -5.05, y: -2.37, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -582,25 +564,25 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: -5.48, y: -2.37, z: 0}
-        inSlope: {x: -0.0000110622705, y: 0, z: 0}
-        outSlope: {x: -0.0000110622705, y: 0, z: 0}
+        inSlope: {x: -0.000014288767, y: 0, z: 0}
+        outSlope: {x: -0.000014288767, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: {x: -5.4800014, y: -2.37, z: 0}
-        inSlope: {x: -0.000011444091, y: 0, z: 0}
-        outSlope: {x: -0.000011444091, y: 0, z: 0}
+        inSlope: {x: -0.000014927077, y: 0, z: 0}
+        outSlope: {x: -0.000014927077, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: -6.81, y: -1.49, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -609,7 +591,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: -6.08, y: -2.34, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -620,7 +602,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -634,61 +616,61 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: -9.13, y: -7.22, z: 0}
-        inSlope: {x: -2.9142873, y: 0, z: 0}
-        outSlope: {x: -2.9142873, y: 0, z: 0}
+        inSlope: {x: -3.948389, y: 0, z: 0}
+        outSlope: {x: -3.948389, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: -12.27, y: -5.25, z: 0}
-        inSlope: {x: -1.459213, y: 5.0248723, z: 0}
-        outSlope: {x: -1.459213, y: 5.0248723, z: 0}
+        inSlope: {x: -1.8240165, y: 6.2810903, z: 0}
+        outSlope: {x: -1.8240165, y: 6.2810903, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: {x: -12.361201, y: -4.9359455, z: 0}
-        inSlope: {x: -1.3680125, y: 4.7108173, z: 0}
-        outSlope: {x: -1.3680125, y: 4.7108173, z: 0}
+        inSlope: {x: -1.8240167, y: 6.2810903, z: 0}
+        outSlope: {x: -1.8240167, y: 6.2810903, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: {x: -12.75, y: -1.83, z: 0}
-        inSlope: {x: -0.000071522285, y: 0, z: 0}
-        outSlope: {x: -0.000071522285, y: 0, z: 0}
+        inSlope: {x: -0.000095363044, y: 0, z: 0}
+        outSlope: {x: -0.000095363044, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: {x: -12.750005, y: -1.8300008, z: 0}
-        inSlope: {x: 0, y: -0.000012261523, z: 0}
-        outSlope: {x: 0, y: -0.000012261523, z: 0}
+        inSlope: {x: 0, y: -0.00001560558, z: 0}
+        outSlope: {x: 0, y: -0.00001560558, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: -12.38, y: -1.88, z: 0}
-        inSlope: {x: 3.0621073, y: 0, z: 0}
-        outSlope: {x: 3.0621073, y: 0, z: 0}
+        inSlope: {x: 6.342937, y: 0, z: 0}
+        outSlope: {x: 6.342937, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: -8.62, y: -0.85, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -699,7 +681,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Head_IK
+    path: enemy2/Head_IK
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -713,16 +695,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: -2.3477619, y: 1.2263919, z: 0}
-        inSlope: {x: -0.3627273, y: -0.36273345, z: 0}
-        outSlope: {x: -0.3627273, y: -0.36273345, z: 0}
+        inSlope: {x: -0.491437, y: -0.4914453, z: 0}
+        outSlope: {x: -0.491437, y: -0.4914453, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: -2.914014, y: 0.71406835, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -731,16 +713,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: -2.4783607, y: 1.0012766, z: 0}
-        inSlope: {x: 0.7871619, y: 0.7197524, z: 0}
-        outSlope: {x: 0.7871619, y: 0.7197524, z: 0}
+        inSlope: {x: 1.3028886, y: 1.1913142, z: 0}
+        outSlope: {x: 1.3028886, y: 1.1913142, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: -2.2842846, y: 1.2898703, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -751,7 +733,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso
+    path: enemy2/Torso
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -765,16 +747,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: -0.6505701, y: -1.4883202, z: 0}
-        inSlope: {x: 0, y: 2.0599966, z: 0}
-        outSlope: {x: 0, y: 2.0599966, z: 0}
+        inSlope: {x: 0, y: 2.790963, z: 0}
+        outSlope: {x: 0, y: 2.790963, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: -2.580574, y: -0.713593, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -783,25 +765,25 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: {x: -2.5193462, y: -0.8404782, z: 0}
-        inSlope: {x: 0.77340376, y: -1.6027601, z: 0}
-        outSlope: {x: 0.77340376, y: -1.6027601, z: 0}
+        inSlope: {x: 0.9796448, y: -2.0301628, z: 0}
+        outSlope: {x: 0.9796448, y: -2.0301628, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: {x: -1.663795, y: -1.7102234, z: 0}
-        inSlope: {x: 3.0634549, y: -3.2077124, z: 0}
-        outSlope: {x: 3.0634549, y: -3.2077124, z: 0}
+        inSlope: {x: 4.135665, y: -4.3304124, z: 0}
+        outSlope: {x: 4.135665, y: -4.3304124, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: -1.1407914, y: -2.283949, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -810,7 +792,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: -1.5621525, y: -2.1555905, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -821,7 +803,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -835,43 +817,43 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: {x: 7.65, y: -1.26, z: 0}
-        inSlope: {x: 0, y: -2.4571428, z: 0}
-        outSlope: {x: 0, y: -2.4571428, z: 0}
+        inSlope: {x: 0, y: -3.3290324, z: 0}
+        outSlope: {x: 0, y: -3.3290324, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 8.42, y: -2.82, z: 0}
-        inSlope: {x: 0, y: -1.1142908, z: 0}
-        outSlope: {x: 0, y: -1.1142908, z: 0}
+        inSlope: {x: 0, y: -1.4857211, z: 0}
+        outSlope: {x: 0, y: -1.4857211, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: {x: 7.99, y: -2.9500005, z: 0}
-        inSlope: {x: -3.4400022, y: 0, z: 0}
-        outSlope: {x: -3.4400022, y: 0, z: 0}
+        inSlope: {x: -4.48696, y: 0, z: 0}
+        outSlope: {x: -4.48696, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: 4.02, y: -1.41, z: 0.11}
-        inSlope: {x: 0, y: 3.9750009, z: 0}
-        outSlope: {x: 0, y: 3.9750009, z: 0}
+        inSlope: {x: 0, y: 7.482354, z: 0}
+        outSlope: {x: 0, y: 7.482354, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 8.65, y: -0.83, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -882,7 +864,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Tail_IK
+    path: enemy2/Tail_IK
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -896,7 +878,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 0.7624519, y: -2.2835035, z: -0.00006566619}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -905,7 +887,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 1.3895366, y: -1.6490915, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -916,7 +898,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -930,7 +912,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 3.3089082, y: 0.33970392, z: 0.000016661568}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -939,7 +921,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 1.9101391, y: 0.33149004, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -950,7 +932,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Head_IK/Head_IK_Target
+    path: enemy2/Head_IK/Head_IK_Target
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -964,25 +946,25 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: -0.30877352, y: -1.6153924, z: 0}
-        inSlope: {x: 0.5624162, y: 0, z: 0}
-        outSlope: {x: 0.5624162, y: 0, z: 0}
+        inSlope: {x: 0.7498883, y: 0, z: 0}
+        outSlope: {x: 0.7498883, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: -0.14004862, y: -0.75701505, z: 0.0000007301569}
-        inSlope: {x: 0, y: 1.7868865, z: 0}
-        outSlope: {x: 0, y: 1.7868865, z: 0}
+        inSlope: {x: 0, y: 2.9576051, z: 0}
+        outSlope: {x: 0, y: 2.9576051, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: -1.7715297, y: -0.18588334, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -993,7 +975,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Tail_IK/Tail_IK_Target
+    path: enemy2/Tail_IK/Tail_IK_Target
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1007,7 +989,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 2.4495203, y: -0.12041184, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -1016,16 +998,16 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: {x: 1.8562559, y: 0.30408907, z: 0}
-        inSlope: {x: -1.1500388, y: 0, z: 0}
-        outSlope: {x: -1.1500388, y: 0, z: 0}
+        inSlope: {x: -1.9035125, y: 0, z: 0}
+        outSlope: {x: -1.9035125, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 1.5294893, y: 0.27495742, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -1036,7 +1018,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Back_Paw_IK/Back_Paw_IK_Target
+    path: enemy2/Back_Paw_IK/Back_Paw_IK_Target
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1050,7 +1032,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: {x: 5.761387, y: 0.963108, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -1059,7 +1041,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: {x: 4.65, y: 2.04, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -1068,7 +1050,7 @@ AnimationClip:
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: {x: 5.3766084, y: 1.6539937, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
@@ -1079,7 +1061,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
   m_ScaleCurves: []
   m_FloatCurves:
   - curve:
@@ -1095,7 +1077,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -1104,7 +1086,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -1113,7 +1095,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -1125,7 +1107,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Flip
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 114
     script: {fileID: 11500000, guid: 30ae93fb156fc6d4c828c64571fc3edd, type: 3}
   - curve:
@@ -1141,7 +1123,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -1150,7 +1132,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -1162,7 +1144,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_ConstrainRotation
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 114
     script: {fileID: 11500000, guid: 30ae93fb156fc6d4c828c64571fc3edd, type: 3}
   m_PPtrCurves: []
@@ -1181,126 +1163,126 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 521481640
+      path: 2531812016
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2993616708
+      path: 2710278749
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 99762681
+      path: 3023185457
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3869152129
+      path: 163652657
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3654243657
+      path: 494207712
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3420034683
+      path: 2048520627
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3222250485
+      path: 2361196677
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1382264721
+      path: 36334606
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2831470384
+      path: 4169993391
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2669614884
+      path: 2215550976
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1696308011
+      path: 3974550579
       attribute: 1
       script: {fileID: 0}
       typeID: 4
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3654243657
+      path: 494207712
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 521481640
+      path: 2531812016
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3869152129
+      path: 163652657
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 2993616708
+      path: 2710278749
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3222250485
+      path: 2361196677
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 3420034683
+      path: 2048520627
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 1696308011
+      path: 3974550579
       attribute: 4
       script: {fileID: 0}
       typeID: 4
@@ -1314,21 +1296,21 @@ AnimationClip:
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 99762681
+      path: 3023185457
       attribute: 4
       script: {fileID: 0}
       typeID: 4
       customType: 4
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 99762681
+      path: 3023185457
       attribute: 2757980490
       script: {fileID: 11500000, guid: 30ae93fb156fc6d4c828c64571fc3edd, type: 3}
       typeID: 114
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
-      path: 99762681
+      path: 3023185457
       attribute: 1272398970
       script: {fileID: 11500000, guid: 30ae93fb156fc6d4c828c64571fc3edd, type: 3}
       typeID: 114
@@ -1340,12 +1322,12 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.5
+    m_StopTime: 1
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
-    m_LoopTime: 1
+    m_LoopTime: 0
     m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
@@ -1369,44 +1351,35 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
-        value: -0.82
-        inSlope: -1.0857143
-        outSlope: -1.0857143
+        time: 0.36666667
+        value: 1
+        inSlope: 12.619356
+        outSlope: 12.619356
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
-        value: -12.357353
-        inSlope: -49.307148
-        outSlope: -49.307148
+        time: 0.51666665
+        value: 7.4
+        inSlope: 61.714294
+        outSlope: 61.714294
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
-        value: -23.83
-        inSlope: -3.8978605
-        outSlope: -3.8978605
+        time: 0.71666664
+        value: 22.6
+        inSlope: 67.034485
+        outSlope: 67.034485
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
-        value: -24.317232
-        inSlope: -3.6542413
-        outSlope: -3.6542413
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.5
-        value: -28.6
+        time: 1
+        value: 39.8
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1425,7 +1398,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0
+        value: -40.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1433,26 +1406,17 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
-        value: 1.13
-        inSlope: 6.4571433
-        outSlope: 6.4571433
+        time: 0.36666667
+        value: -32.6
+        inSlope: 27.096771
+        outSlope: 27.096771
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
-        value: 7.19331
-        inSlope: 24.578573
-        outSlope: 24.578573
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 0.96666664
-        value: 12.6
+        time: 0.51666665
+        value: -26.6
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1460,17 +1424,17 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
-        value: 2.6549644
-        inSlope: -19.912235
-        outSlope: -19.912235
+        time: 0.71666664
+        value: -27.8
+        inSlope: -9.931025
+        outSlope: -9.931025
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
-        value: 0
+        time: 1
+        value: -41.7
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1497,7 +1461,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1506,7 +1470,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1515,7 +1479,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1524,16 +1488,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1561,7 +1516,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -1.97
         inSlope: 0
         outSlope: 0
@@ -1570,16 +1525,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -0.83
-        inSlope: 16.094118
-        outSlope: 16.094118
+        inSlope: 21.046158
+        outSlope: 21.046158
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 4.1
         inSlope: 0
         outSlope: 0
@@ -1588,7 +1543,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -0.86
         inSlope: 0
         outSlope: 0
@@ -1600,7 +1555,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1616,25 +1571,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -2.47
-        inSlope: -1.6571428
-        outSlope: -1.6571428
+        inSlope: -2.245161
+        outSlope: -2.245161
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -3.4
-        inSlope: -13.129411
-        outSlope: -13.129411
+        inSlope: -17.169233
+        outSlope: -17.169233
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: -8.96
         inSlope: 0
         outSlope: 0
@@ -1643,7 +1598,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -2.18
         inSlope: 0
         outSlope: 0
@@ -1655,7 +1610,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1671,7 +1626,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1680,7 +1635,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1689,7 +1644,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1698,7 +1653,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1710,7 +1665,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1726,16 +1681,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: -5.4626107
-        inSlope: 2.0599995
-        outSlope: 2.0599995
+        inSlope: 2.8090901
+        outSlope: 2.8090901
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -5.05
         inSlope: 0
         outSlope: 0
@@ -1744,25 +1699,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -5.48
-        inSlope: -0.0000110622705
-        outSlope: -0.0000110622705
+        inSlope: -0.000014288767
+        outSlope: -0.000014288767
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -5.4800014
-        inSlope: -0.000011444091
-        outSlope: -0.000011444091
+        inSlope: -0.000014927077
+        outSlope: -0.000014927077
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -6.81
         inSlope: 0
         outSlope: 0
@@ -1771,7 +1726,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -6.08
         inSlope: 0
         outSlope: 0
@@ -1783,7 +1738,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1799,16 +1754,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: -2.3579814
-        inSlope: -0.059999943
-        outSlope: -0.059999943
+        inSlope: -0.081818104
+        outSlope: -0.081818104
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -2.37
         inSlope: 0
         outSlope: 0
@@ -1817,7 +1772,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -2.37
         inSlope: 0
         outSlope: 0
@@ -1826,7 +1781,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -2.37
         inSlope: 0
         outSlope: 0
@@ -1835,7 +1790,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -1.49
         inSlope: 0
         outSlope: 0
@@ -1844,7 +1799,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -2.34
         inSlope: 0
         outSlope: 0
@@ -1856,7 +1811,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1872,7 +1827,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1881,7 +1836,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1890,7 +1845,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1899,7 +1854,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1908,7 +1863,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1917,7 +1872,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1929,7 +1884,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -1945,7 +1900,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1954,7 +1909,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1963,7 +1918,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1972,7 +1927,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1981,7 +1936,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -1990,7 +1945,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2002,7 +1957,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2018,7 +1973,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2027,7 +1982,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2036,7 +1991,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2045,7 +2000,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2054,7 +2009,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2063,7 +2018,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2075,7 +2030,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2091,7 +2046,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -58.589005
         inSlope: 0
         outSlope: 0
@@ -2100,7 +2055,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -74.482
         inSlope: 0
         outSlope: 0
@@ -2109,25 +2064,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: -71.978004
-        inSlope: 31.629446
-        outSlope: 31.629446
+        inSlope: 40.063965
+        outSlope: 40.063965
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -33.672
-        inSlope: 66.16889
-        outSlope: 66.16889
+        inSlope: 89.32802
+        outSlope: 89.32802
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -26.228
         inSlope: 0
         outSlope: 0
@@ -2136,7 +2091,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -80.466
         inSlope: 0
         outSlope: 0
@@ -2148,7 +2103,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2164,43 +2119,43 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -9.13
-        inSlope: -2.9142873
-        outSlope: -2.9142873
+        inSlope: -3.948389
+        outSlope: -3.948389
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -12.27
-        inSlope: -1.459213
-        outSlope: -1.459213
+        inSlope: -1.8240165
+        outSlope: -1.8240165
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: -12.361201
-        inSlope: -1.3680125
-        outSlope: -1.3680125
+        inSlope: -1.8240167
+        outSlope: -1.8240167
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: -12.75
-        inSlope: -0.000071522285
-        outSlope: -0.000071522285
+        inSlope: -0.000095363044
+        outSlope: -0.000095363044
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -12.750005
         inSlope: 0
         outSlope: 0
@@ -2209,16 +2164,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -12.38
-        inSlope: 3.0621073
-        outSlope: 3.0621073
+        inSlope: 6.342937
+        outSlope: 6.342937
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -8.62
         inSlope: 0
         outSlope: 0
@@ -2230,7 +2185,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2246,7 +2201,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -7.22
         inSlope: 0
         outSlope: 0
@@ -2255,25 +2210,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -5.25
-        inSlope: 5.0248723
-        outSlope: 5.0248723
+        inSlope: 6.2810903
+        outSlope: 6.2810903
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: -4.9359455
-        inSlope: 4.7108173
-        outSlope: 4.7108173
+        inSlope: 6.2810903
+        outSlope: 6.2810903
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: -1.83
         inSlope: 0
         outSlope: 0
@@ -2282,16 +2237,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -1.8300008
-        inSlope: -0.000012261523
-        outSlope: -0.000012261523
+        inSlope: -0.00001560558
+        outSlope: -0.00001560558
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -1.88
         inSlope: 0
         outSlope: 0
@@ -2300,7 +2255,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -0.85
         inSlope: 0
         outSlope: 0
@@ -2312,7 +2267,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2328,7 +2283,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2337,7 +2292,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2346,7 +2301,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2355,7 +2310,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2364,7 +2319,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2373,7 +2328,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2382,7 +2337,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2394,7 +2349,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2410,7 +2365,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -2419,7 +2374,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: Infinity
         outSlope: Infinity
@@ -2428,7 +2383,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -2440,7 +2395,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_Flip
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 114
     script: {fileID: 11500000, guid: 30ae93fb156fc6d4c828c64571fc3edd, type: 3}
   - curve:
@@ -2456,7 +2411,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2465,7 +2420,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2474,7 +2429,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2486,7 +2441,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2502,7 +2457,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2511,7 +2466,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2520,7 +2475,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2532,7 +2487,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2548,16 +2503,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0.61600006
-        inSlope: 3.145532
-        outSlope: 3.145532
+        inSlope: 4.2240005
+        outSlope: 4.2240005
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 41.534
         inSlope: 0
         outSlope: 0
@@ -2566,7 +2521,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2578,7 +2533,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Back_Paw_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2594,16 +2549,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -2.3477619
-        inSlope: -0.3627273
-        outSlope: -0.3627273
+        inSlope: -0.491437
+        outSlope: -0.491437
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -2.914014
         inSlope: 0
         outSlope: 0
@@ -2612,16 +2567,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -2.4783607
-        inSlope: 0.7871619
-        outSlope: 0.7871619
+        inSlope: 1.3028886
+        outSlope: 1.3028886
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -2.2842846
         inSlope: 0
         outSlope: 0
@@ -2633,7 +2588,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Torso
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2649,16 +2604,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 1.2263919
-        inSlope: -0.36273345
-        outSlope: -0.36273345
+        inSlope: -0.4914453
+        outSlope: -0.4914453
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0.71406835
         inSlope: 0
         outSlope: 0
@@ -2667,16 +2622,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 1.0012766
-        inSlope: 0.7197524
-        outSlope: 0.7197524
+        inSlope: 1.1913142
+        outSlope: 1.1913142
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1.2898703
         inSlope: 0
         outSlope: 0
@@ -2688,7 +2643,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Torso
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2704,7 +2659,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2713,7 +2668,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2722,7 +2677,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2731,7 +2686,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2743,7 +2698,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Torso
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2759,7 +2714,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2768,7 +2723,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2777,7 +2732,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2786,7 +2741,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2798,7 +2753,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Torso
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2814,7 +2769,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2823,7 +2778,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2832,7 +2787,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2841,7 +2796,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -2853,7 +2808,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Torso
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2869,7 +2824,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -40.778004
         inSlope: 0
         outSlope: 0
@@ -2878,16 +2833,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -393.219
-        inSlope: -82.13155
-        outSlope: -82.13155
+        inSlope: -107.797676
+        outSlope: -107.797676
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -407.592
         inSlope: 0
         outSlope: 0
@@ -2896,7 +2851,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -42.469
         inSlope: 0
         outSlope: 0
@@ -2908,7 +2863,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Torso
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2924,7 +2879,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -0.6505701
         inSlope: 0
         outSlope: 0
@@ -2933,7 +2888,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -2.580574
         inSlope: 0
         outSlope: 0
@@ -2942,25 +2897,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: -2.5193462
-        inSlope: 0.77340376
-        outSlope: 0.77340376
+        inSlope: 0.9796448
+        outSlope: 0.9796448
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -1.663795
-        inSlope: 3.0634549
-        outSlope: 3.0634549
+        inSlope: 4.135665
+        outSlope: 4.135665
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -1.1407914
         inSlope: 0
         outSlope: 0
@@ -2969,7 +2924,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -1.5621525
         inSlope: 0
         outSlope: 0
@@ -2981,7 +2936,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -2997,16 +2952,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -1.4883202
-        inSlope: 2.0599966
-        outSlope: 2.0599966
+        inSlope: 2.790963
+        outSlope: 2.790963
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -0.713593
         inSlope: 0
         outSlope: 0
@@ -3015,25 +2970,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: -0.8404782
-        inSlope: -1.6027601
-        outSlope: -1.6027601
+        inSlope: -2.0301628
+        outSlope: -2.0301628
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -1.7102234
-        inSlope: -3.2077124
-        outSlope: -3.2077124
+        inSlope: -4.3304124
+        outSlope: -4.3304124
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -2.283949
         inSlope: 0
         outSlope: 0
@@ -3042,7 +2997,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -2.1555905
         inSlope: 0
         outSlope: 0
@@ -3054,7 +3009,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3070,7 +3025,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3079,7 +3034,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3088,7 +3043,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3097,7 +3052,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3106,7 +3061,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3115,7 +3070,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3127,7 +3082,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Torso/Upper_Body
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3143,7 +3098,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 7.65
         inSlope: 0
         outSlope: 0
@@ -3152,7 +3107,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 8.42
         inSlope: 0
         outSlope: 0
@@ -3161,16 +3116,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: 7.99
-        inSlope: -3.4400022
-        outSlope: -3.4400022
+        inSlope: -4.48696
+        outSlope: -4.48696
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 4.02
         inSlope: 0
         outSlope: 0
@@ -3179,7 +3134,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 8.65
         inSlope: 0
         outSlope: 0
@@ -3191,7 +3146,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Tail_IK
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3207,25 +3162,25 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: -1.26
-        inSlope: -2.4571428
-        outSlope: -2.4571428
+        inSlope: -3.3290324
+        outSlope: -3.3290324
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -2.82
-        inSlope: -1.1142908
-        outSlope: -1.1142908
+        inSlope: -1.4857211
+        outSlope: -1.4857211
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: -2.9500005
         inSlope: 0
         outSlope: 0
@@ -3234,16 +3189,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -1.41
-        inSlope: 3.9750009
-        outSlope: 3.9750009
+        inSlope: 7.482354
+        outSlope: 7.482354
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -0.83
         inSlope: 0
         outSlope: 0
@@ -3255,7 +3210,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Tail_IK
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3271,7 +3226,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.5
+        time: 0.36666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3280,7 +3235,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3289,7 +3244,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3298,7 +3253,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0.11
         inSlope: 0
         outSlope: 0
@@ -3307,7 +3262,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3319,7 +3274,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Tail_IK
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3335,7 +3290,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3344,7 +3299,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3353,7 +3308,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3362,7 +3317,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3374,7 +3329,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3390,7 +3345,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3399,7 +3354,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3408,7 +3363,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3417,7 +3372,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3429,7 +3384,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3445,7 +3400,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.28333333
+        time: 0.21666667
         value: -4.425
         inSlope: 0
         outSlope: 0
@@ -3454,7 +3409,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 85.985
         inSlope: 0
         outSlope: 0
@@ -3463,16 +3418,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 9.67
-        inSlope: -48.350006
-        outSlope: -48.350006
+        inSlope: -80.027596
+        outSlope: -80.027596
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3484,7 +3439,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Front_Paw_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3500,7 +3455,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0.7624519
         inSlope: 0
         outSlope: 0
@@ -3509,7 +3464,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1.3895366
         inSlope: 0
         outSlope: 0
@@ -3521,7 +3476,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3537,7 +3492,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -2.2835035
         inSlope: 0
         outSlope: 0
@@ -3546,7 +3501,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -1.6490915
         inSlope: 0
         outSlope: 0
@@ -3558,7 +3513,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3574,7 +3529,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -0.00006566619
         inSlope: 0
         outSlope: 0
@@ -3583,7 +3538,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3595,7 +3550,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3611,7 +3566,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3620,7 +3575,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3632,7 +3587,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3648,7 +3603,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -0.0050000004
         inSlope: 0
         outSlope: 0
@@ -3657,7 +3612,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -0.006
         inSlope: 0
         outSlope: 0
@@ -3669,7 +3624,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3685,7 +3640,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -96.776
         inSlope: 0
         outSlope: 0
@@ -3694,7 +3649,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -94.212006
         inSlope: 0
         outSlope: 0
@@ -3706,7 +3661,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3722,7 +3677,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -3731,7 +3686,7 @@ AnimationClip:
         inWeight: 0
         outWeight: 0
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1
         inSlope: Infinity
         outSlope: Infinity
@@ -3743,7 +3698,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_ConstrainRotation
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 114
     script: {fileID: 11500000, guid: 30ae93fb156fc6d4c828c64571fc3edd, type: 3}
   - curve:
@@ -3759,7 +3714,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 3.3089082
         inSlope: 0
         outSlope: 0
@@ -3768,7 +3723,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1.9101391
         inSlope: 0
         outSlope: 0
@@ -3780,7 +3735,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Head_IK/Head_IK_Target
+    path: enemy2/Head_IK/Head_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3796,7 +3751,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0.33970392
         inSlope: 0
         outSlope: 0
@@ -3805,7 +3760,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0.33149004
         inSlope: 0
         outSlope: 0
@@ -3817,7 +3772,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Head_IK/Head_IK_Target
+    path: enemy2/Head_IK/Head_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3833,7 +3788,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0.000016661568
         inSlope: 0
         outSlope: 0
@@ -3842,7 +3797,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3854,7 +3809,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Head_IK/Head_IK_Target
+    path: enemy2/Head_IK/Head_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3870,16 +3825,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -0.30877352
-        inSlope: 0.5624162
-        outSlope: 0.5624162
+        inSlope: 0.7498883
+        outSlope: 0.7498883
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -0.14004862
         inSlope: 0
         outSlope: 0
@@ -3888,7 +3843,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -1.7715297
         inSlope: 0
         outSlope: 0
@@ -3900,7 +3855,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Tail_IK/Tail_IK_Target
+    path: enemy2/Tail_IK/Tail_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3916,7 +3871,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -1.6153924
         inSlope: 0
         outSlope: 0
@@ -3925,16 +3880,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -0.75701505
-        inSlope: 1.7868865
-        outSlope: 1.7868865
+        inSlope: 2.9576051
+        outSlope: 2.9576051
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -0.18588334
         inSlope: 0
         outSlope: 0
@@ -3946,7 +3901,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Tail_IK/Tail_IK_Target
+    path: enemy2/Tail_IK/Tail_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -3962,7 +3917,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3971,7 +3926,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0.0000007301569
         inSlope: 0
         outSlope: 0
@@ -3980,7 +3935,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -3992,7 +3947,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Tail_IK/Tail_IK_Target
+    path: enemy2/Tail_IK/Tail_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4008,7 +3963,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 2.4495203
         inSlope: 0
         outSlope: 0
@@ -4017,16 +3972,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 1.8562559
-        inSlope: -1.1500388
-        outSlope: -1.1500388
+        inSlope: -1.9035125
+        outSlope: -1.9035125
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1.5294893
         inSlope: 0
         outSlope: 0
@@ -4038,7 +3993,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Back_Paw_IK/Back_Paw_IK_Target
+    path: enemy2/Back_Paw_IK/Back_Paw_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4054,7 +4009,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -0.12041184
         inSlope: 0
         outSlope: 0
@@ -4063,7 +4018,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 0.30408907
         inSlope: 0
         outSlope: 0
@@ -4072,7 +4027,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0.27495742
         inSlope: 0
         outSlope: 0
@@ -4084,7 +4039,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Back_Paw_IK/Back_Paw_IK_Target
+    path: enemy2/Back_Paw_IK/Back_Paw_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4100,7 +4055,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4109,7 +4064,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.78333336
+        time: 0.5833333
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4118,7 +4073,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4130,7 +4085,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Back_Paw_IK/Back_Paw_IK_Target
+    path: enemy2/Back_Paw_IK/Back_Paw_IK_Target
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4146,7 +4101,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4155,7 +4110,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -2.7800002
         inSlope: 0
         outSlope: 0
@@ -4164,7 +4119,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4176,7 +4131,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Tail_IK
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4192,7 +4147,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4201,7 +4156,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: -1.2570001
         inSlope: 0
         outSlope: 0
@@ -4210,7 +4165,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4222,7 +4177,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Tail_IK
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4238,7 +4193,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.96666664
+        time: 0.71666664
         value: -33.249
         inSlope: 0
         outSlope: 0
@@ -4247,7 +4202,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 35.691
         inSlope: 0
         outSlope: 0
@@ -4256,7 +4211,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4268,7 +4223,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Tail_IK
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4284,7 +4239,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 5.761387
         inSlope: 0
         outSlope: 0
@@ -4293,7 +4248,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 4.65
         inSlope: 0
         outSlope: 0
@@ -4302,7 +4257,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 5.3766084
         inSlope: 0
         outSlope: 0
@@ -4314,7 +4269,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.x
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4330,7 +4285,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0.963108
         inSlope: 0
         outSlope: 0
@@ -4339,7 +4294,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 2.04
         inSlope: 0
         outSlope: 0
@@ -4348,7 +4303,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 1.6539937
         inSlope: 0
         outSlope: 0
@@ -4360,7 +4315,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.y
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4376,7 +4331,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4385,7 +4340,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4394,7 +4349,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4406,7 +4361,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalPosition.z
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4422,7 +4377,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4431,7 +4386,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4440,7 +4395,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4452,7 +4407,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4468,7 +4423,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4477,7 +4432,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4486,7 +4441,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4498,7 +4453,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4514,16 +4469,16 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 9.456
-        inSlope: 48.37583
-        outSlope: 48.37583
+        inSlope: 64.501114
+        outSlope: 64.501114
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
+        time: 0.9
         value: 38.7
         inSlope: 0
         outSlope: 0
@@ -4532,7 +4487,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: -19.351002
         inSlope: 0
         outSlope: 0
@@ -4544,7 +4499,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Torso/Tail1
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4560,7 +4515,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4569,16 +4524,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4606,7 +4552,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4615,16 +4561,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4652,7 +4589,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.7
+        time: 0.51666665
         value: -1.3900001
         inSlope: 0
         outSlope: 0
@@ -4661,16 +4598,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.2
-        value: 5.9150004
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 136
-        weightedMode: 0
-        inWeight: 0.33333334
-        outWeight: 0.33333334
-      - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4698,7 +4626,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4707,7 +4635,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4716,7 +4644,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4728,7 +4656,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.x
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4744,7 +4672,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4753,7 +4681,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4762,7 +4690,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 0
         inSlope: 0
         outSlope: 0
@@ -4774,7 +4702,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.y
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4790,7 +4718,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 0.75
+        time: 0.56666666
         value: 15.185
         inSlope: 0
         outSlope: 0
@@ -4799,7 +4727,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.0166667
+        time: 0.76666665
         value: -7.0660005
         inSlope: 0
         outSlope: 0
@@ -4808,7 +4736,7 @@ AnimationClip:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
-        time: 1.5
+        time: 1
         value: 8.029
         inSlope: 0
         outSlope: 0
@@ -4820,7 +4748,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: localEulerAnglesRaw.z
-    path: Head_IK
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   m_EulerEditorCurves:
@@ -4831,7 +4759,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Torso/Tail1
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4841,7 +4769,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Torso/Tail1
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4851,7 +4779,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Torso/Tail1
+    path: enemy2/Tail_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4861,7 +4789,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Back_Paw_IK
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4871,7 +4799,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Back_Paw_IK
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4881,7 +4809,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Back_Paw_IK
+    path: enemy2/Torso/Upper_Body
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4921,7 +4849,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Head_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4931,7 +4859,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Head_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4941,7 +4869,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Head_IK
+    path: enemy2/Back_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4951,7 +4879,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Torso
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4961,7 +4889,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Torso
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4971,7 +4899,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Torso
+    path: enemy2/Head_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4981,7 +4909,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Tail_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4991,7 +4919,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Tail_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5001,7 +4929,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Tail_IK
+    path: enemy2/Front_Paw_IK
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5011,7 +4939,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Torso/Upper_Body
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5021,7 +4949,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Torso/Upper_Body
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5031,7 +4959,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Torso/Upper_Body
+    path: enemy2/Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5041,7 +4969,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5051,7 +4979,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5061,7 +4989,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Torso/Upper_Body/Head
+    path: enemy2/Torso/Tail1
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5071,7 +4999,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Front_Paw_IK
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5081,7 +5009,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Front_Paw_IK
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -5091,9 +5019,23 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Front_Paw_IK
+    path: enemy2/Torso/Upper_Body/Head
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 0.36666667
+    functionName: StartAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1
+    functionName: StopAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0

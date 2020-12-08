@@ -36,6 +36,10 @@ public class GameMenus : MonoBehaviour
         {
             DeathButton();
         }
+        if (Input.GetKeyDown("1")) // for debugging purposes only
+        {
+            ShowCursor();
+        }
     }
 
     public void PauseButton()   //pause or unpause game

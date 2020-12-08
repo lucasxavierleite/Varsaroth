@@ -1656,7 +1656,7 @@ PrefabInstance:
     - target: {fileID: 5292910212414882421, guid: fe90e9f07ecb6efa89232e1059bfdb28,
         type: 3}
       propertyPath: m_Name
-      value: Light
+      value: Backlight
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe90e9f07ecb6efa89232e1059bfdb28, type: 3}

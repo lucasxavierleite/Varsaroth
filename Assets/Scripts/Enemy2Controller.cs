@@ -33,7 +33,7 @@ public class Enemy2Controller : MonoBehaviour
 
     public float _currentAnimationState = STATE_IDLE;
 
-    public Transform[] _attackPoint;
+    public Transform _attackPoint;
     public float _attackCircle = 5f;
     public LayerMask _enemyLayers;
 
@@ -69,7 +69,6 @@ public class Enemy2Controller : MonoBehaviour
                 ChangeDirection("left");
             }
 
-
             float distanceX = Mathf.Abs(transform.position.x - player.transform.position.x);
             float distanceY = (transform.position.y - player.transform.position.y);
             //move enemy
@@ -86,7 +85,6 @@ public class Enemy2Controller : MonoBehaviour
             {
                 _canMove = false;
                 ChangeState(STATE_ATTACK);
-
             }
         }
 
@@ -109,12 +107,14 @@ public class Enemy2Controller : MonoBehaviour
         {
             if (direction == "right")
             {
-                _renderer.flipX = false;
+                // _renderer.flipX = false;
+                transform.Rotate(0, -180, 0);
                 _currentDirection = "right";
             }
             else if (direction == "left")
             {
-                _renderer.flipX = true;
+                // _renderer.flipX = true;
+                transform.Rotate(0, -180, 0);
                 _currentDirection = "left";
             }
         }
@@ -172,15 +172,7 @@ public class Enemy2Controller : MonoBehaviour
         }
 
         //detect enemies hit
-        if (_currentDirection == "right")
-        {
-            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[0].position, _attackCircle, _enemyLayers);
-        }
-        else
-        {
-            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[1].position, _attackCircle, _enemyLayers);
-        }
-
+        _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint.position, _attackCircle, _enemyLayers);
 
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
@@ -192,8 +184,7 @@ public class Enemy2Controller : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         if (_attackPoint == null) return;
-        Gizmos.DrawWireSphere(_attackPoint[0].position, _attackCircle);
-        Gizmos.DrawWireSphere(_attackPoint[1].position, _attackCircle);
+        Gizmos.DrawWireSphere(_attackPoint.position, _attackCircle);
     }
 
     /// <summary>
