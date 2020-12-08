@@ -11,22 +11,13 @@ public class RoomStatus : MonoBehaviour
 
     EnemySpawner _roomSpawn;
     bool _isBoss = false; // indicates if a room is a boss room
-    
 
     private void Start()
     {
         _roomSpawn = GetComponentInParent<EnemySpawner>();
         if (_roomVisited == false)
         {
-            transform.Find("Torch").gameObject.SetActive(false);
-            transform.Find("Torch (1)").gameObject.SetActive(false);
-            transform.Find("Torch (2)").gameObject.SetActive(false);
-            transform.Find("Torch (3)").gameObject.SetActive(false);
-            transform.Find("Torch (4)").gameObject.SetActive(false);
-            transform.Find("Torch (5)").gameObject.SetActive(false);
-            transform.Find("Torch (6)").gameObject.SetActive(false);
-            transform.Find("Torch (7)").gameObject.SetActive(false);
-			transform.Find("Backlight").gameObject.SetActive(false);
+			EnableLights(false);
         }
     }
 
@@ -57,15 +48,7 @@ public class RoomStatus : MonoBehaviour
             _roomVisited = true;
             gameObject.layer = 12;
 
-            transform.Find("Torch").gameObject.SetActive(true);
-            transform.Find("Torch (1)").gameObject.SetActive(true);
-            transform.Find("Torch (2)").gameObject.SetActive(true);
-            transform.Find("Torch (3)").gameObject.SetActive(true);
-            transform.Find("Torch (4)").gameObject.SetActive(true);
-            transform.Find("Torch (5)").gameObject.SetActive(true);
-            transform.Find("Torch (6)").gameObject.SetActive(true);
-            transform.Find("Torch (7)").gameObject.SetActive(true);
-			transform.Find("Backlight").gameObject.SetActive(true);
+            EnableLights(true);
 
             if (_isBoss == false)
             {
@@ -92,5 +75,13 @@ public class RoomStatus : MonoBehaviour
         _isBoss = true;
         Debug.Log("sala boss");
     }
-
+	
+	void EnableLights(bool enable)
+	{
+		foreach (Transform child in transform)
+		{
+			if(child.CompareTag("Light"))
+				child.gameObject.SetActive(enable);
+		}
+	}
 }
