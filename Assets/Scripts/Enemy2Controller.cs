@@ -18,6 +18,7 @@ public class Enemy2Controller : MonoBehaviour
 
     private float _attackRange = 20.0f;
     private float _attackSpeed = 250.0f;
+    private int enemy_hp = 50;
 
     RoomStatus _temporaryRoom;
 
@@ -28,6 +29,7 @@ public class Enemy2Controller : MonoBehaviour
     const int STATE_WALK = 1;
     const int STATE_ATTACK = 2;
     const int STATE_DEAD = 3;
+    const int STATE_TAKE_DAMAGE = 4;
 
     public float _currentAnimationState = STATE_IDLE;
 
@@ -35,6 +37,8 @@ public class Enemy2Controller : MonoBehaviour
     public float _attackCircle = 5f;
     public LayerMask _enemyLayers;
 
+    [SerializeField]
+    private GameObject _enemyIcon;
 
     private void Start()
     {
@@ -146,6 +150,9 @@ public class Enemy2Controller : MonoBehaviour
                 _collider.enabled = false;
                 break;
 
+            case STATE_TAKE_DAMAGE:
+
+                break;
         }
 
         _currentAnimationState = state;
@@ -178,7 +185,7 @@ public class Enemy2Controller : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
-            enemy.SendMessageUpwards("OnKill");
+            enemy.SendMessageUpwards("TakeDamage", 15);
         }
     }
 
@@ -203,6 +210,19 @@ public class Enemy2Controller : MonoBehaviour
 
     }
 
+    /* Funcao do inimigo de receber dano */
+    public void TakeDamage(int damTaken)
+    {
+        System.Random p = new System.Random();
+        enemy_hp -= damTaken;
+        ChangeState(STATE_TAKE_DAMAGE);
+        Debug.Log("Vida do inimigo = " + enemy_hp);
+
+        if (enemy_hp <= 0)
+        {
+            OnKill();
+        }
+    }
 
     void OnKill() // on enemy killed, reduce amount of remaining enemies
     {

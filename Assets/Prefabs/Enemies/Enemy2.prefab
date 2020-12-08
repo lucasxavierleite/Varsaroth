@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 4100877384874551384}
   - component: {fileID: 4470506283902241606}
   - component: {fileID: 8921410364113368060}
-  - component: {fileID: 4695726398369924239}
+  - component: {fileID: 7263717227725600028}
   m_Layer: 9
   m_Name: Enemy2
   m_TagString: Enemy
@@ -145,7 +145,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &4695726398369924239
+--- !u!114 &7263717227725600028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,10 +154,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1195646609930463930}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 84463c469af16994591bccb3b3f8965a, type: 3}
+  m_Script: {fileID: 11500000, guid: 0104d543df205914a8bff8ab723be258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1269457372847503205, guid: 6fb0e2f14baed0c928f42a4abdb90f40, type: 3}
   _walkingDistance: 300
   speed: 50
   _canMove: 0
@@ -166,7 +166,7 @@ MonoBehaviour:
   _attackCircle: 5
   _enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   _enemyIcon: {fileID: 8500457805832686666}
 --- !u!1 &1422781540181651792
 GameObject:

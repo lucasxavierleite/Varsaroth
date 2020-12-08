@@ -67,6 +67,12 @@ public class GameMenus : MonoBehaviour
         deathScreen.SetActive(true);
     }
 
+    public void RestartGame()
+    {
+        StageData._data.Restart(); //sets game to stage 1
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+    }
+
     public void ReturnToMenu()
     {
         // zero run score and return to menu

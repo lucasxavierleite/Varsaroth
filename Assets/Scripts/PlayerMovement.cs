@@ -88,7 +88,7 @@ public class PlayerMovement : MonoBehaviour
 
             _moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, Input.GetAxis("Vertical") * _moveSpeed, 0);
 
-            if (_currentAnimationState != STATE_DODGE && _currentAnimationState != STATE_ATTACK)
+            if (_currentAnimationState != STATE_DODGE && _currentAnimationState != STATE_ATTACK && _currentAnimationState != STATE_DEAD)
             {
                 MovePlayer(_moveDirection);
             }
@@ -203,8 +203,7 @@ public class PlayerMovement : MonoBehaviour
         foreach (Collider2D enemy in _enemiesHit)
         {
             AudioManager.instance.Play("AtackHit");
-            enemy.SendMessageUpwards("TakeDamage");
-            enemy.SendMessageUpwards("OnKill");
+            enemy.SendMessageUpwards("TakeDamage", 25);
         }
     }
     private void OnDrawGizmosSelected()
@@ -266,13 +265,31 @@ public class PlayerMovement : MonoBehaviour
 
    void OnKill()
    {
-        if (player_hp <= 0 && _isInvulnerable == false)
-        {
-            ChangeState(STATE_DEAD);
-            Time.timeScale = 0.5f;
-            AudioManager.instance.Play("PlayerDeath");
-        }   
+        ChangeState(STATE_DEAD);
+        Time.timeScale = 0.5f;
+        AudioManager.instance.Play("PlayerDeath");
+  
    }
+
+    /* Funcao do player de receber dano */
+    public void TakeDamage(int damTaken){
+
+        if (_isInvulnerable == false)
+        {
+            Debug.Log("Vida do player = " + player_hp);
+            player_hp -= damTaken;
+            _hpBar.SetHp(player_hp);
+            ChangeState(STATE_TAKE_DAMAGE);
+            AudioManager.instance.Play("GettingHit");
+
+            StageData._data.SetHP(player_hp);
+
+            if (player_hp <= 0)
+            {
+                OnKill();
+            }
+        }
+    }
 
     public bool isAlive()
     {
@@ -281,18 +298,6 @@ public class PlayerMovement : MonoBehaviour
             return true;
         }
         else return false;
-    }
-
-    /* Funcao do player de receber dano */
-    public void TakeDamage(){
-        Debug.Log("Vida do player = " + player_hp);
-        player_hp -= 20; //takes 5 hits to die
-        _hpBar.SetHp(player_hp);
-        ChangeState(STATE_TAKE_DAMAGE);
-        AudioManager.instance.Play("GettingHit");
-
-        StageData._data.SetHP(player_hp);
-
     }
 
     /* geters e seters de HP e dano */
