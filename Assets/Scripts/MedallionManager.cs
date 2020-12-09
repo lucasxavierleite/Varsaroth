@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class MedallionManager : MonoBehaviour
 {
-    Vector3 destination;
+    private Vector3 destination;
+    
+    [SerializeField]
+    private Animator _animator;
+    private bool _floating;
+    
     private void Start()
     {
-        destination = transform.position + new Vector3(0, 40); 
+        destination = transform.position + new Vector3(0, 40);
+        _floating = false;
     }
 
     float speed = 10;
@@ -15,5 +21,11 @@ public class MedallionManager : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, destination, speed * Time.deltaTime);
+        if (transform.position == destination && !_floating)
+        {
+            _floating = true;
+            _animator.SetTrigger("float");
+            Debug.Log("start floating");
+        }
     }
 }
