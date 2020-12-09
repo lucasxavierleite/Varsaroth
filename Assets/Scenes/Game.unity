@@ -669,7 +669,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -1590859591
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!224 &247970060
@@ -4047,7 +4047,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 0.9623585, b: 0.8018868, a: 1}
   m_Intensity: 0.4
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 000000009987c28d
+  m_ApplyToSortingLayers: 000000009987c28ddfefbb27
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: -1
