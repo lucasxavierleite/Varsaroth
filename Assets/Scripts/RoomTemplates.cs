@@ -29,7 +29,7 @@ public class RoomTemplates : MonoBehaviour
         Debug.Log(_rand);
         Instantiate(StartRoom[_rand], transform.position, Quaternion.identity);
 
-        if (StageData._data.GetStage() != 5)
+        if (StageData._data.GetStage() != 5)//change to == 5 to test king
         {
             Invoke("SpawnGate", 2f);
         }
@@ -54,7 +54,7 @@ public class RoomTemplates : MonoBehaviour
 
     void SpawnKing()
     {
-        //Instantiate(_King, _rooms[_rooms.Count - 1].transform.position, Quaternion.identity);
+        Instantiate(_King, _rooms[_rooms.Count - 1].transform.position, Quaternion.identity);
         _rooms[_rooms.Count - 1].SendMessage("UpgradeRoom");
     }
 }
