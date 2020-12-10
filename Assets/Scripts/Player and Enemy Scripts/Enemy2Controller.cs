@@ -14,9 +14,10 @@ public class Enemy2Controller : MonoBehaviour
     public float speed = 50.0f; //In what time will the enemy complete the journey between its position and the players position
 
     public bool _canMove = false; // Indicates if monster can move
+    public bool _canAttack;
 
     private float _attackRange = 40.0f;
-    private int enemy_hp = 50;
+    private int enemy_hp = 75;
 
     RoomStatus _temporaryRoom;
 
@@ -46,11 +47,14 @@ public class Enemy2Controller : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _collider = GetComponent<Collider2D>();
         _playerHit = false;
+        _canAttack = true;
+        
     }
 
     private void Update()
     {
-        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != STATE_TAKE_DAMAGE && _currentAnimationState != STATE_ATTACK)
+        
+        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != STATE_TAKE_DAMAGE && _currentAnimationState != STATE_ATTACK && _canAttack == true)
         {
             if (_canMove == true)
             {
@@ -172,7 +176,7 @@ public class Enemy2Controller : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
-            enemy.SendMessageUpwards("TakeDamage", 15);
+            enemy.SendMessageUpwards("TakeDamage", 20);
             _playerHit = true;
         }
     }
@@ -194,6 +198,7 @@ public class Enemy2Controller : MonoBehaviour
             _enemyRig.velocity = Vector2.zero;
             ChangeState(STATE_IDLE);
             _playerHit = false;
+            StartCoroutine(AttackCD());
         }
 
     }
@@ -209,6 +214,20 @@ public class Enemy2Controller : MonoBehaviour
         {
             OnKill();
         }
+    }
+
+    IEnumerator AttackCD()
+    {
+        _canAttack = false;
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 1.5 seconds.
+        yield return new WaitForSeconds(0.5f);
+
+        //After we have waited 1.5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        _canAttack = true;
     }
 
     void OnKill() // on enemy killed, reduce amount of remaining enemies

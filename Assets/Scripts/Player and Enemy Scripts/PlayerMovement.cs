@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D _playerRB;
     Vector3 _moveDirection;
     float _moveSpeed = 100f;
+    bool _isDead;
 
     //player states
     const int STATE_IDLE = 0;
@@ -48,6 +49,7 @@ public class PlayerMovement : MonoBehaviour
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
         _isInvulnerable = false;
+        _isDead = false;
         _hpBar.SetMaxHp(StageData._data.GetMAXHP());
         _hpBar.SetHp(player_hp);
     }
@@ -72,7 +74,6 @@ public class PlayerMovement : MonoBehaviour
             }
             if (_dodgeInb)
             {
-
                 ChangeState(STATE_DODGE);
 
                 AudioManager.instance.Play("Dodge");
@@ -82,7 +83,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-
+        if (_isDead == false)
+        {
             _moveDirection = new Vector3(Input.GetAxis("Horizontal") * _moveSpeed, Input.GetAxis("Vertical") * _moveSpeed, 0);
 
             if (_currentAnimationState != STATE_DODGE && _currentAnimationState != STATE_ATTACK && _currentAnimationState != STATE_DEAD)
@@ -90,13 +92,15 @@ public class PlayerMovement : MonoBehaviour
                 MovePlayer(_moveDirection);
             }
         
-        if(_currentAnimationState == STATE_WALK){
-            if(AudioManager.instance.isPlaying("Steps") == false){
-                AudioManager.instance.Play("Steps");
+            if(_currentAnimationState == STATE_WALK){
+                if(AudioManager.instance.isPlaying("Steps") == false){
+                    AudioManager.instance.Play("Steps");
+                }
+            }else{
+                AudioManager.instance.Stop("Steps");
             }
-        }else{
-            AudioManager.instance.Stop("Steps");
         }
+
     }
 
     void MovePlayer(Vector3 dir)
@@ -263,6 +267,7 @@ public class PlayerMovement : MonoBehaviour
    {
         ChangeState(STATE_DEAD);
         Time.timeScale = 0.5f;
+        _isDead = true;
         AudioManager.instance.Play("PlayerDeath");
    }
 

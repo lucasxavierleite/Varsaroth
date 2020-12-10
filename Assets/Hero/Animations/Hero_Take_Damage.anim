@@ -4109,15 +4109,15 @@ AnimationClip:
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.016666668
+  - time: 0
     functionName: ToggleInvulnerability
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.5
-    functionName: ToggleInvulnerability
+  - time: 0.51666665
+    functionName: StopDodge
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
