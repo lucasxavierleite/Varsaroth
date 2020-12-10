@@ -31,6 +31,7 @@ Transform:
   m_LocalScale: {x: 2.0874999, y: 2.0874999, z: 2.0874999}
   m_Children:
   - {fileID: 779869285235268691}
+  - {fileID: 3818784042865862340}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -122,6 +123,78 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4888a3bffbdcb246a1845439df338b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2874638383449774896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3818784042865862340}
+  - component: {fileID: 3257572540760020474}
+  m_Layer: 15
+  m_Name: Backlight
+  m_TagString: Light
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3818784042865862340
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874638383449774896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 6.9747505, y: 6.9227953, z: 2.442861}
+  m_Children: []
+  m_Father: {fileID: 1460995509442279971}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3257572540760020474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2874638383449774896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_LightType: 0
+  m_BlendStyleIndex: 1
+  m_FalloffIntensity: 0.2
+  m_Color: {r: 1, g: 0.9254902, b: 0.60784316, a: 1}
+  m_Intensity: 0.025
+  m_LightVolumeOpacity: 0.791
+  m_ApplyToSortingLayers: 00000000
+  m_LightCookieSprite: {fileID: 0}
+  m_UseNormalMap: 0
+  m_LightOrder: -1
+  m_AlphaBlendOnOverlap: 0
+  m_ShadowIntensity: 0
+  m_ShadowVolumeIntensity: 0
+  m_PointLightInnerAngle: 301
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 1
+  m_PointLightOuterRadius: 15.5
+  m_PointLightDistance: 3
+  m_PointLightQuality: 1
+  m_ShapeLightParametricSides: 4
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.01
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: 0.2800267, y: 0.7879573, z: -0.000100022604}
+  - {x: 0.30245525, y: -0.29434618, z: -0.000029174804}
+  - {x: -0.40675402, y: -0.38519025, z: 0.0000005114504}
+  - {x: -0.40167826, y: 0.72550964, z: -0.000010996053}
 --- !u!1 &6653729280995803205
 GameObject:
   m_ObjectHideFlags: 0

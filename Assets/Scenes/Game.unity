@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -415,7 +415,7 @@ MonoBehaviour:
   _HUDCanvas: {fileID: 247970056}
   _storyTextAsset: {fileID: 4900000, guid: 248620912f92fe1b0870ee8bc1bac4ff, type: 3}
   _storyText: {fileID: 1909921606}
-  currentStage: 0
+  _currentStage: 0
   _currentPage: 0
   _continueButton: {fileID: 1518416360}
   _nextButton: {fileID: 1909495037}
@@ -1821,7 +1821,7 @@ Transform:
   m_Children:
   - {fileID: 739046527}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &631367854
 MonoBehaviour:
@@ -2185,7 +2185,7 @@ PrefabInstance:
     - target: {fileID: 4532363523516618127, guid: 328d1e57826d7c7408b119df34644a3e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4532363523516618127, guid: 328d1e57826d7c7408b119df34644a3e,
         type: 3}

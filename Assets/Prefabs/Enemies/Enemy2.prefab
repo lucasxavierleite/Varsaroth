@@ -183,6 +183,7 @@ MonoBehaviour:
   _walkingDistance: 300
   speed: 50
   _canMove: 0
+  _canAttack: 0
   _currentAnimationState: 0
   _attackPoint: {fileID: 9070782605187915093}
   _attackCircle: 3
@@ -811,7 +812,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4437295109244075711}
   - component: {fileID: 1828766758281811593}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Enemy_Backlight
   m_TagString: Light
   m_Icon: {fileID: 0}
