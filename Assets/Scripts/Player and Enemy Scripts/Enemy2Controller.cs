@@ -155,7 +155,7 @@ public class Enemy2Controller : MonoBehaviour
                 break;
 
             case STATE_TAKE_DAMAGE:
-
+                _animator.SetTrigger("take_damage");
                 break;
         }
 
