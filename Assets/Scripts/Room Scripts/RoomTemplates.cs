@@ -29,7 +29,7 @@ public class RoomTemplates : MonoBehaviour
         Debug.Log(_rand);
         Instantiate(StartRoom[_rand], transform.position, Quaternion.identity);
 
-        if (StageData._data.GetStage() != 5)//change to == 5 to test king
+        if (StageData._data.GetStage() == 3)//change to == 3 to test king
         {
             Invoke("SpawnGate", 2f);
         }

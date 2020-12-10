@@ -6,7 +6,6 @@ public class Enemy2Controller : MonoBehaviour
 {
     Rigidbody2D _enemyRig;
     public GameObject player; // The target player
-    SpriteRenderer _renderer;
     Animator _animator;
     Collider2D _collider;
 
@@ -17,7 +16,6 @@ public class Enemy2Controller : MonoBehaviour
     public bool _canMove = false; // Indicates if monster can move
 
     private float _attackRange = 40.0f;
-    private float _attackSpeed = 500.0f;
     private int enemy_hp = 50;
 
     RoomStatus _temporaryRoom;
@@ -32,6 +30,7 @@ public class Enemy2Controller : MonoBehaviour
     const int STATE_TAKE_DAMAGE = 4;
 
     public float _currentAnimationState = STATE_IDLE;
+    private bool _playerHit;
 
     public Transform _attackPoint;
     public float _attackCircle = 5f;
@@ -45,8 +44,8 @@ public class Enemy2Controller : MonoBehaviour
         _enemyRig = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         _animator = GetComponentInChildren<Animator>();
-        _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
+        _playerHit = false;
     }
 
     private void Update()
@@ -87,7 +86,10 @@ public class Enemy2Controller : MonoBehaviour
                 ChangeState(STATE_ATTACK);
             }
         }
-
+        else if (_currentAnimationState == STATE_ATTACK && _playerHit == false)
+        {
+            StartAttack();
+        }
     }
 
     void MoveVertically(float direction)
@@ -143,11 +145,13 @@ public class Enemy2Controller : MonoBehaviour
 
             case STATE_ATTACK:
                 _animator.SetTrigger("attack");//2
+                AudioManager.instance.Play("RatSound");
                 break;
 
             case STATE_DEAD:
                 _animator.SetBool("dead", true);
                 _collider.enabled = false;
+                AudioManager.instance.Play("RatDying");
                 break;
 
             case STATE_TAKE_DAMAGE:
@@ -162,15 +166,6 @@ public class Enemy2Controller : MonoBehaviour
     {
         Collider2D[] _enemiesHit;
 
-        if (_currentDirection == "right")
-        {
-            _enemyRig.velocity = Vector2.right * _attackSpeed;
-        }
-        else
-        {
-            _enemyRig.velocity = Vector2.left * _attackSpeed;
-        }
-
         //detect enemies hit
         _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint.position, _attackCircle, _enemyLayers);
 
@@ -178,6 +173,7 @@ public class Enemy2Controller : MonoBehaviour
         foreach (Collider2D enemy in _enemiesHit)
         {
             enemy.SendMessageUpwards("TakeDamage", 15);
+            _playerHit = true;
         }
     }
 
@@ -197,6 +193,7 @@ public class Enemy2Controller : MonoBehaviour
         {
             _enemyRig.velocity = Vector2.zero;
             ChangeState(STATE_IDLE);
+            _playerHit = false;
         }
 
     }
@@ -204,7 +201,6 @@ public class Enemy2Controller : MonoBehaviour
     /* Funcao do inimigo de receber dano */
     public void TakeDamage(int damTaken)
     {
-        System.Random p = new System.Random();
         enemy_hp -= damTaken;
         ChangeState(STATE_TAKE_DAMAGE);
         Debug.Log("Vida do inimigo = " + enemy_hp);

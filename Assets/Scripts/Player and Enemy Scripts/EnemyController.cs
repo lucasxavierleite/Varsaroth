@@ -29,7 +29,7 @@ public class EnemyController : MonoBehaviour
     const int STATE_DEAD = 3;
     const int STATE_TAKE_DAMAGE = 4;
 
-    private int damage = 30; // dano que um inimigo recebe a cada golpe (por padrao e 30)
+    private int damage = 25; // dano que um inimigo recebe a cada golpe (por padrao e 30)
 
     private int enemy_hp = 100;
 
@@ -195,7 +195,6 @@ public class EnemyController : MonoBehaviour
 
     /* Funcao do inimigo de receber dano */
     public void TakeDamage(int damTaken){
-        System.Random p = new System.Random();
         enemy_hp -= damTaken;
         ChangeState(STATE_TAKE_DAMAGE);
         Debug.Log("Vida do inimigo = " + enemy_hp);
@@ -203,35 +202,6 @@ public class EnemyController : MonoBehaviour
         if (enemy_hp <= 0)
         {
             OnKill();
-        }
-    }
-
-    
-
-    /* geters e seters de HP e dano */
-    public int getHP(){
-        return enemy_hp;
-    }
-
-    public int getDamage(){
-        return damage;
-    }
-
-    public void setHP(int hp){
-        enemy_hp = hp;
-    }
-
-    public void setDamage(int dam){
-        damage = dam;
-    }
-    /***********************************/
-
-
-    public void setDifficulty(int d){
-        switch(d){
-            case 1: enemy_hp = 90; damage = 30; break;
-            case 2: enemy_hp = 100; damage = 20; break;
-            case 3: enemy_hp = 150; damage = 15; break;
         }
     }
 
