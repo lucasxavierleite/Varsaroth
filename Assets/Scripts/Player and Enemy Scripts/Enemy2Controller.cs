@@ -215,16 +215,23 @@ public class Enemy2Controller : MonoBehaviour
     {
         ChangeState(STATE_DEAD);
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
+        
         foreach (GameObject room in rooms)
         {
-
             _temporaryRoom = room.GetComponent<RoomStatus>();
             if (_temporaryRoom._currentRoom == true)
             {
                 _temporaryRoom._enemiesRemaining--;
                 break;
             }
-
+        }
+        
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Light"))
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     }
 }

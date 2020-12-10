@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 1828766758281811593}
   m_Layer: 10
   m_Name: Enemy_Backlight
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1153,15 +1153,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5db9de56e321258a5a8f851f4c1a85cf, type: 3}
---- !u!1 &8500457805832686666 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7005663247853447623, guid: 5db9de56e321258a5a8f851f4c1a85cf,
-    type: 3}
-  m_PrefabInstance: {fileID: 1499325724317377933}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6969826979286950095 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8392282502611322178, guid: 5db9de56e321258a5a8f851f4c1a85cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 1499325724317377933}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8500457805832686666 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7005663247853447623, guid: 5db9de56e321258a5a8f851f4c1a85cf,
     type: 3}
   m_PrefabInstance: {fileID: 1499325724317377933}
   m_PrefabAsset: {fileID: 0}

@@ -222,5 +222,13 @@ public class EnemyController : MonoBehaviour
             }
                 
         }
+        
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Light"))
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
     }
 }
