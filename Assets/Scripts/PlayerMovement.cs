@@ -33,14 +33,16 @@ public class PlayerMovement : MonoBehaviour
 
     public float _dashSpeed;
     public bool _isInvulnerable;
-
-
+    
     public Transform _attackPoint;
     public float _attackRange = 10f;
     public LayerMask _enemyLayers;
 
     [SerializeField]
     private HpBar _hpBar;
+
+    [SerializeField]
+    private TransitionManager _transitionManager;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
         _isInvulnerable = false;
-        _hpBar.SetMaxHp((StageData._data.GetMAXHP()));
+        _hpBar.SetMaxHp(StageData._data.GetMAXHP());
         _hpBar.SetHp(player_hp);
     }
 
@@ -268,7 +270,6 @@ public class PlayerMovement : MonoBehaviour
         ChangeState(STATE_DEAD);
         Time.timeScale = 0.5f;
         AudioManager.instance.Play("PlayerDeath");
-  
    }
 
     /* Funcao do player de receber dano */
@@ -363,6 +364,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.CompareTag("TrapDoor"))  // if player touches trapdoor, send him to next level
         {
+            _transitionManager.Show();
             StageData._data.NextLevel();// go to next level
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         }

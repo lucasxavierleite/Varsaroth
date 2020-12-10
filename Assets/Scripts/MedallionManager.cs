@@ -25,7 +25,6 @@ public class MedallionManager : MonoBehaviour
         {
             _floating = true;
             _animator.SetTrigger("float");
-            Debug.Log("start floating");
         }
     }
 }
