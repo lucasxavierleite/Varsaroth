@@ -11,7 +11,7 @@ public class MiniMapZoom : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown("tab"))
+        if (Input.GetKeyDown("tab") && Time.timeScale > 0)
         {
             if (_isZoomed)
             {

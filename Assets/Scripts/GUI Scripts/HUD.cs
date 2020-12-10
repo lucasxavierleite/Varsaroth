@@ -14,7 +14,7 @@ public class HUD : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Quote))
+        if (Input.GetKeyDown(KeyCode.Quote) && Time.timeScale > 0)
 		{
 			ToggleHUDButton();
 		}
