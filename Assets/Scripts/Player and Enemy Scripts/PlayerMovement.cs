@@ -335,6 +335,7 @@ public class PlayerMovement : MonoBehaviour
         {
             StageData._data.NextLevel();// go to next level
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
+            AudioManager.instance.Play("DoorOpening");
         }
     }
 }
