@@ -143,11 +143,13 @@ public class Enemy2Controller : MonoBehaviour
 
             case STATE_ATTACK:
                 _animator.SetTrigger("attack");//2
+                AudioManager.instance.Play("RatSound");
                 break;
 
             case STATE_DEAD:
                 _animator.SetBool("dead", true);
                 _collider.enabled = false;
+                AudioManager.instance.Play("RatDying");
                 break;
 
             case STATE_TAKE_DAMAGE:

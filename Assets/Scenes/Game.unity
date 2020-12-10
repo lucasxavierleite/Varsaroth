@@ -1685,6 +1685,18 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: RatSound
+    clip: {fileID: 8300000, guid: 45309bf7a63e94a48885568b131ea971, type: 3}
+    volume: 0.5
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RatDying
+    clip: {fileID: 8300000, guid: 805bc9d5aa074c549b583f05c4fae777, type: 3}
+    volume: 0.304
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &650366146
 Transform:
   m_ObjectHideFlags: 0
