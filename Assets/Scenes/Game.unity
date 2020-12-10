@@ -1697,6 +1697,12 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: GateSound
+    clip: {fileID: 8300000, guid: b0a852aa1cc8d084daccf83ebb2f4b33, type: 3}
+    volume: 0.42
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &650366146
 Transform:
   m_ObjectHideFlags: 0
