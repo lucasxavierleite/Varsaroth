@@ -38,15 +38,16 @@ public class TransitionManager : MonoBehaviour
     [SerializeField]
     private Color32 menuItemHighlightColor;
 
-    [SerializeField]
-    private AudioSource _backgroundMusic;
+    private AudioSource _stageBackgroundMusic;
+    private AudioSource _storyBackgroundMusic;
     
-
     private const string STAGE_TAG = @"\[STAGE \d\]";
     private const string PAGE_TAG = @"\(PAGE \d\)";
 
     void Start()
     {
+		_stageBackgroundMusic = Camera.main.GetComponent<AudioSource>();
+		_storyBackgroundMusic = GetComponent<AudioSource>();
         ReadStory();
         Show();
     }
@@ -69,15 +70,12 @@ public class TransitionManager : MonoBehaviour
         
         // if (!AudioManager.instance.isPlaying("Trapdoor"))
         // {
-            AudioManager.instance.Play("StoryBackgroundMusic"); // play story background music
+        //  	_storyBackgroundMusic.Play(); 
         // }
     }
 
     public void Show()
     {
-        _currentPage = 1;
-        UpdateText();
-        
         _menuCanvas.SetActive(false);
         _HUDCanvas.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
@@ -93,14 +91,18 @@ public class TransitionManager : MonoBehaviour
             ShowContinueButton();
         }
 
-        _backgroundMusic.Stop();
+        _stageBackgroundMusic.Stop();
+		_storyBackgroundMusic.Play();
 
         // if it's not the first stage, play the trapdoor SFX first
         
         // if (StageData._data.GetStage() > 1)
         // {
-        //     AudioManager.instace.Play("Trapdoor");
+        //     AudioManager.instance.Play("Trapdoor");
         // }
+
+		_currentPage = 1;
+        UpdateText();
     }
 
     public void Hide()
@@ -110,7 +112,8 @@ public class TransitionManager : MonoBehaviour
         _HUDCanvas.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
         _transitionPanel.SetActive(false);
-        _backgroundMusic.Play();
+		_storyBackgroundMusic.Stop();
+        _stageBackgroundMusic.Play();
     }
 
     public void Next()

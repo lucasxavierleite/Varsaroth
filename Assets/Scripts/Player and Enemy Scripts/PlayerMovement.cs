@@ -39,9 +39,6 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField]
     private HpBar _hpBar;
 
-    [SerializeField]
-    private TransitionManager _transitionManager;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -336,7 +333,6 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (other.CompareTag("TrapDoor"))  // if player touches trapdoor, send him to next level
         {
-            _transitionManager.Show();
             StageData._data.NextLevel();// go to next level
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
         }
