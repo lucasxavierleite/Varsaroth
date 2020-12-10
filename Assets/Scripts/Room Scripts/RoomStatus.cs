@@ -23,7 +23,7 @@ public class RoomStatus : MonoBehaviour
 
     private void Update()
     {
-        if (_currentRoom) Debug.Log(_enemiesRemaining);
+        //if (_currentRoom) Debug.Log(_enemiesRemaining);
         if (_currentRoom && _enemiesRemaining <= 0)
         {
             _currentRoom = false;

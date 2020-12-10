@@ -10,11 +10,11 @@ public class EnemyController : MonoBehaviour
     Animator _animator;
     Collider2D _collider;
 
-    public float _walkingDistance = 300.0f; // maximum distance which the enemy will start moving towards the player
+    float _walkingDistance = 84.69f; // maximum distance which the enemy will start moving towards the player
 
     public float speed = 50.0f; //In what time will the enemy complete the journey between its position and the players position
 
-    public bool _canMove = false; // Indicates if monster can move
+    public bool _canMove; // Indicates if monster can move
 
     private float _attackRange = 20.0f;
 
@@ -28,8 +28,6 @@ public class EnemyController : MonoBehaviour
     const int STATE_ATTACK = 2;
     const int STATE_DEAD = 3;
     const int STATE_TAKE_DAMAGE = 4;
-
-    private int damage = 25; // dano que um inimigo recebe a cada golpe (por padrao e 30)
 
     private int enemy_hp = 100;
 
@@ -48,6 +46,7 @@ public class EnemyController : MonoBehaviour
         _animator = GetComponentInChildren<Animator>();
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
+        _canMove = false;
     }
 
     private void Update()
