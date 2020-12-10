@@ -32,7 +32,7 @@ public class RoomStatus : MonoBehaviour
                 if (transform.GetChild(a).tag == "Door")
                 {
                     transform.GetChild(a).GetComponent<Animator>().SetTrigger("open");
-                    transform.GetChild(a).GetComponent<BoxCollider2D>().isTrigger = true; // open doors after all enemies were defetead
+                    transform.GetChild(a).GetComponent<BoxCollider2D>().isTrigger = true; // open doors after all enemies were defeated
                     transform.GetChild(a).gameObject.layer = 12;
                 }
             }

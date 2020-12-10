@@ -9,6 +9,7 @@ public class MedallionManager : MonoBehaviour
     [SerializeField]
     private Animator _animator;
     private bool _floating;
+    float speed = 10;
     
     private void Start()
     {
@@ -16,7 +17,7 @@ public class MedallionManager : MonoBehaviour
         _floating = false;
     }
 
-    float speed = 10;
+
     // Update is called once per frame
     void Update()
     {
