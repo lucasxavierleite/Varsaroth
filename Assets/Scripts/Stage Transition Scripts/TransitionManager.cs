@@ -7,7 +7,7 @@ using TMPro;
 public class TransitionManager : MonoBehaviour
 {
     [SerializeField]
-    private GameObject _transitionPanel;
+    private GameObject _transitionCanvas;
     
     [SerializeField]
     private GameObject _menuCanvas;
@@ -18,10 +18,13 @@ public class TransitionManager : MonoBehaviour
     [SerializeField]
     private TextAsset _storyTextAsset;
     
-    private List<List<string>> _storyList = new List<List<string>>();
+    private List<List<string>> _transitionsList = new List<List<string>>();
 
     [SerializeField]
     private TextMeshProUGUI _storyText;
+
+    [SerializeField]
+    private int _currentStage;
 
     [SerializeField]
     private int _currentPage;
@@ -48,6 +51,7 @@ public class TransitionManager : MonoBehaviour
     {
 		_stageBackgroundMusic = Camera.main.GetComponent<AudioSource>();
 		_storyBackgroundMusic = GetComponent<AudioSource>();
+        _currentStage = StageData._data.GetStage();
         ReadStory();
         Show();
     }
@@ -80,9 +84,9 @@ public class TransitionManager : MonoBehaviour
         _HUDCanvas.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
         Time.timeScale = 0;
-        _transitionPanel.SetActive(true);
+        _transitionCanvas.SetActive(true);
 
-        if (_storyList[StageData._data.GetStage()].Count > 1) // if there's more than one page, show next button
+        if (_transitionsList[_currentStage - 1].Count > 1) // if there's more than one page, show next button
         {
             ShowNextButton();
         }
@@ -111,9 +115,7 @@ public class TransitionManager : MonoBehaviour
         _menuCanvas.SetActive(true);
         _HUDCanvas.SetActive(true);
         Cursor.lockState = CursorLockMode.Locked;
-        _transitionPanel.SetActive(false);
-		_storyBackgroundMusic.Stop();
-        _stageBackgroundMusic.Play();
+        _transitionCanvas.SetActive(false);
     }
 
     public void Next()
@@ -121,7 +123,7 @@ public class TransitionManager : MonoBehaviour
         _currentPage++;
         UpdateText();
         
-        if (_storyList[StageData._data.GetStage()].Count <= _currentPage) // if there's no more text to show
+        if (_transitionsList[_currentStage - 1].Count <= _currentPage) // if there's no more text to show
         {
             ShowContinueButton();
         }
@@ -129,7 +131,17 @@ public class TransitionManager : MonoBehaviour
 
     public void Continue()
     {
-        Hide();
+        if (_currentStage < _transitionsList.Count) // if it's not the final transition
+        {
+            _storyBackgroundMusic.Stop();
+            _stageBackgroundMusic.Play();
+            Hide();
+        }
+        else // if it is, load credits scene
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Credits");
+        }
+
     }
 
     private void ReadStory()
@@ -140,7 +152,7 @@ public class TransitionManager : MonoBehaviour
         {
             List<string> stp = new List<string>(Regex.Split(st, PAGE_TAG));
             stp.RemoveAt(0);
-            _storyList.Add(stp);
+            _transitionsList.Add(stp);
         }
 
         // PrintStory();
@@ -149,7 +161,8 @@ public class TransitionManager : MonoBehaviour
 
     private void UpdateText()
     {
-        _storyText.text = _storyList[StageData._data.GetStage()][_currentPage - 1];
+        _storyText.text = _transitionsList[_currentStage - 1][_currentPage - 1];
+        Debug.Log("Showing text from " + _currentStage + " stage");
     }
 
     private void ShowNextButton()
@@ -173,14 +186,20 @@ public class TransitionManager : MonoBehaviour
     {
         text.color = menuItemDefaultColor;
     }
+
+    public void ShowFinalTransition()
+    {
+        _currentStage = _transitionsList.Count;
+        Show();
+    }
     
     private void PrintStory()
     {
-        for (int i = 0; i < _storyList.Count; i++)
+        for (int i = 0; i < _transitionsList.Count; i++)
         {
-            for (int j = 0; j < _storyList[i].Count; j++)
+            for (int j = 0; j < _transitionsList[i].Count; j++)
             {
-                Debug.Log("Element " + i + ", " + j + ": " + _storyList[i][j]);
+                Debug.Log("Element " + i + ", " + j + ": " + _transitionsList[i][j]);
             }
         }
     }

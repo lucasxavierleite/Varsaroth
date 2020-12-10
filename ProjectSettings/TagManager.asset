@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - TrapDoor
   - Light
+  - TransitionManager
   layers:
   - Default
   - TransparentFX
