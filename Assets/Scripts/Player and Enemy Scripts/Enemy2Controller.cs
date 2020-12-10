@@ -215,6 +215,7 @@ public class Enemy2Controller : MonoBehaviour
     {
         ChangeState(STATE_DEAD);
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
+        _enemyIcon.SetActive(false);
         
         foreach (GameObject room in rooms)
         {
