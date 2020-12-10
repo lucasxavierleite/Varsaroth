@@ -44,7 +44,12 @@ public class GameMenus : MonoBehaviour
 
     public void PauseButton()   //pause or unpause game
     {
-        if (!pauseScreen.activeSelf) // if not paused, pause
+        if (deathScreen.activeSelf)
+        {
+            return;
+        }
+
+        if (!pauseScreen.activeSelf) // if not paused and game over screen is not showing, pause
         {
             ShowCursor();
             Time.timeScale = 0;

@@ -29,12 +29,9 @@ public class PlayerMovement : MonoBehaviour
 
     private int player_hp = StageData._data.GetHP(); // StageData script holds global hp and max hp values
 
-    private int damage = 10; // dano que ele recebe a cada golpe (por padrao e 10)
-
     public float _dashSpeed;
     public bool _isInvulnerable;
-
-
+    
     public Transform _attackPoint;
     public float _attackRange = 10f;
     public LayerMask _enemyLayers;
@@ -51,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
         _isInvulnerable = false;
-        _hpBar.SetMaxHp((StageData._data.GetMAXHP()));
+        _hpBar.SetMaxHp(StageData._data.GetMAXHP());
         _hpBar.SetHp(player_hp);
     }
 
@@ -260,7 +257,6 @@ public class PlayerMovement : MonoBehaviour
         {
             _isInvulnerable = true;
         }
-        //Debug.Log("toggle:");
     }
 
    void OnKill()
@@ -268,7 +264,6 @@ public class PlayerMovement : MonoBehaviour
         ChangeState(STATE_DEAD);
         Time.timeScale = 0.5f;
         AudioManager.instance.Play("PlayerDeath");
-  
    }
 
     /* Funcao do player de receber dano */
@@ -298,31 +293,6 @@ public class PlayerMovement : MonoBehaviour
             return true;
         }
         else return false;
-    }
-
-    /* geters e seters de HP e dano */
-    public int getHP(){
-        return player_hp;
-    }
-
-    public int getDamage(){
-        return damage;
-    }
-
-    public void setHP(int hp){
-        player_hp = hp;
-    }
-
-    public void setDamage(int dam){
-        damage = dam;
-    }
-
-    public void setDifficulty(int d){
-        switch(d){
-            case 1: player_hp = 200; damage = 10; break;
-            case 2: player_hp = 150; damage = 20; break;
-            case 3: player_hp = 100; damage = 30; break;
-        }
     }
 
     /// <summary>

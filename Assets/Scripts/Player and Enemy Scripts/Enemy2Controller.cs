@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyController : MonoBehaviour
+public class Enemy2Controller : MonoBehaviour
 {
-  
+    Rigidbody2D _enemyRig;
     public GameObject player; // The target player
-    SpriteRenderer _renderer;
     Animator _animator;
     Collider2D _collider;
 
@@ -16,7 +15,8 @@ public class EnemyController : MonoBehaviour
 
     public bool _canMove = false; // Indicates if monster can move
 
-    private float _attackRange = 20.0f;
+    private float _attackRange = 40.0f;
+    private int enemy_hp = 50;
 
     RoomStatus _temporaryRoom;
 
@@ -29,33 +29,30 @@ public class EnemyController : MonoBehaviour
     const int STATE_DEAD = 3;
     const int STATE_TAKE_DAMAGE = 4;
 
-    private int damage = 30; // dano que um inimigo recebe a cada golpe (por padrao e 30)
+    public float _currentAnimationState = STATE_IDLE;
+    private bool _playerHit;
 
-    private int enemy_hp = 100;
-
-    public int _currentAnimationState = STATE_IDLE;
-
-    public Transform[] _attackPoint;
+    public Transform _attackPoint;
     public float _attackCircle = 5f;
     public LayerMask _enemyLayers;
 
-	[SerializeField]
-	private GameObject _enemyIcon;
+    [SerializeField]
+    private GameObject _enemyIcon;
 
     private void Start()
     {
+        _enemyRig = GetComponent<Rigidbody2D>();
         player = GameObject.FindWithTag("Player");
         _animator = GetComponentInChildren<Animator>();
-        _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
+        _playerHit = false;
     }
 
     private void Update()
     {
-        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != 4)
+        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != STATE_TAKE_DAMAGE && _currentAnimationState != STATE_ATTACK)
         {
-
-            if (_canMove == true  && _currentAnimationState != STATE_ATTACK)
+            if (_canMove == true)
             {
                 ChangeState(STATE_WALK);
                 MoveTowardsPlayer();
@@ -71,23 +68,33 @@ public class EnemyController : MonoBehaviour
                 ChangeDirection("left");
             }
 
-            float distance = Vector2.Distance(transform.position, player.transform.position);
+            float distanceX = Mathf.Abs(transform.position.x - player.transform.position.x);
+            float distanceY = - (transform.position.y - player.transform.position.y);
             //move enemy
-            if (distance < _walkingDistance && distance > _attackRange)
+            if (distanceX < _walkingDistance && distanceX > _attackRange)
             {
                 _canMove = true;
             }
-
+            else if (distanceX < _attackRange && (distanceY > 10 || distanceY < -10))
+            {
+                MoveVertically(distanceY);
+            }
             //stop moving and attack
-            if (distance < _attackRange && _currentAnimationState != STATE_ATTACK)
+            else if (distanceX < _attackRange && _currentAnimationState != STATE_ATTACK)
             {
                 _canMove = false;
                 ChangeState(STATE_ATTACK);
-
             }
-            
         }
+        else if (_currentAnimationState == STATE_ATTACK && _playerHit == false)
+        {
+            StartAttack();
+        }
+    }
 
+    void MoveVertically(float direction)
+    {
+        transform.position = Vector2.MoveTowards(transform.position, transform.position + Vector3.up * direction, (speed/2) * Time.deltaTime);
     }
 
     void MoveTowardsPlayer()
@@ -102,12 +109,14 @@ public class EnemyController : MonoBehaviour
         {
             if (direction == "right")
             {
-                _renderer.flipX = false;
+                // _renderer.flipX = false;
+                transform.Rotate(0, -180, 0);
                 _currentDirection = "right";
             }
             else if (direction == "left")
             {
-                _renderer.flipX = true;
+                // _renderer.flipX = true;
+                transform.Rotate(0, -180, 0);
                 _currentDirection = "left";
             }
         }
@@ -136,13 +145,15 @@ public class EnemyController : MonoBehaviour
 
             case STATE_ATTACK:
                 _animator.SetTrigger("attack");//2
+                AudioManager.instance.Play("RatSound");
                 break;
 
             case STATE_DEAD:
                 _animator.SetBool("dead", true);
                 _collider.enabled = false;
+                AudioManager.instance.Play("RatDying");
                 break;
-            
+
             case STATE_TAKE_DAMAGE:
                 _animator.SetTrigger("take_damage");
                 break;
@@ -156,28 +167,20 @@ public class EnemyController : MonoBehaviour
         Collider2D[] _enemiesHit;
 
         //detect enemies hit
-        if (_currentDirection == "right")
-        {
-            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[0].position, _attackCircle, _enemyLayers);
-        }
-        else
-        {
-            _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint[1].position, _attackCircle, _enemyLayers);
-        }
-
+        _enemiesHit = Physics2D.OverlapCircleAll(_attackPoint.position, _attackCircle, _enemyLayers);
 
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
-            enemy.SendMessageUpwards("TakeDamage", 30);
+            enemy.SendMessageUpwards("TakeDamage", 15);
+            _playerHit = true;
         }
     }
 
     private void OnDrawGizmosSelected()
     {
         if (_attackPoint == null) return;
-        Gizmos.DrawWireSphere(_attackPoint[0].position, _attackCircle);
-        Gizmos.DrawWireSphere(_attackPoint[1].position, _attackCircle);
+        Gizmos.DrawWireSphere(_attackPoint.position, _attackCircle);
     }
 
     /// <summary>
@@ -188,14 +191,16 @@ public class EnemyController : MonoBehaviour
         //disable sword hitbox
         if (_currentAnimationState == STATE_ATTACK)
         {
+            _enemyRig.velocity = Vector2.zero;
             ChangeState(STATE_IDLE);
+            _playerHit = false;
         }
 
     }
 
     /* Funcao do inimigo de receber dano */
-    public void TakeDamage(int damTaken){
-        System.Random p = new System.Random();
+    public void TakeDamage(int damTaken)
+    {
         enemy_hp -= damTaken;
         ChangeState(STATE_TAKE_DAMAGE);
         Debug.Log("Vida do inimigo = " + enemy_hp);
@@ -206,42 +211,12 @@ public class EnemyController : MonoBehaviour
         }
     }
 
-    
-
-    /* geters e seters de HP e dano */
-    public int getHP(){
-        return enemy_hp;
-    }
-
-    public int getDamage(){
-        return damage;
-    }
-
-    public void setHP(int hp){
-        enemy_hp = hp;
-    }
-
-    public void setDamage(int dam){
-        damage = dam;
-    }
-    /***********************************/
-
-
-    public void setDifficulty(int d){
-        switch(d){
-            case 1: enemy_hp = 90; damage = 30; break;
-            case 2: enemy_hp = 100; damage = 20; break;
-            case 3: enemy_hp = 150; damage = 15; break;
-        }
-    }
-
     void OnKill() // on enemy killed, reduce amount of remaining enemies
     {
-
         ChangeState(STATE_DEAD);
         GameObject[] rooms = GameObject.FindGameObjectsWithTag("Wall");
-		_enemyIcon.SetActive(false); 
-
+        _enemyIcon.SetActive(false);
+        
         foreach (GameObject room in rooms)
         {
             _temporaryRoom = room.GetComponent<RoomStatus>();
@@ -250,7 +225,14 @@ public class EnemyController : MonoBehaviour
                 _temporaryRoom._enemiesRemaining--;
                 break;
             }
-                
+        }
+        
+        foreach (Transform child in transform)
+        {
+            if (child.CompareTag("Light"))
+            {
+                child.gameObject.SetActive(false);
+            }
         }
     }
 }

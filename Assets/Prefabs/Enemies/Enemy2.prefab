@@ -185,7 +185,7 @@ MonoBehaviour:
   _canMove: 0
   _currentAnimationState: 0
   _attackPoint: {fileID: 9070782605187915093}
-  _attackCircle: 5
+  _attackCircle: 3
   _enemyLayers:
     serializedVersion: 2
     m_Bits: 1024
@@ -402,7 +402,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3337595747966266283}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.739998, y: 0.29000092, z: 0}
+  m_LocalPosition: {x: 11, y: 0.29000092, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4100877384874551384}
@@ -813,7 +813,7 @@ GameObject:
   - component: {fileID: 1828766758281811593}
   m_Layer: 10
   m_Name: Enemy_Backlight
-  m_TagString: Untagged
+  m_TagString: Light
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

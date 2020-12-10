@@ -17,6 +17,8 @@ public class StageData : MonoBehaviour
     public void NextLevel()//goes to next level
     {
         _stage++;
+        _maxHP += 25;  // increases player max hp by 25
+        _playerHP += 25; // heals player for 25hp
     }
 
     public void Restart()//go back to level 1
