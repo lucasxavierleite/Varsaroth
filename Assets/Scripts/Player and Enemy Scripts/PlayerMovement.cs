@@ -59,8 +59,12 @@ public class PlayerMovement : MonoBehaviour
         if (_currentAnimationState != STATE_DEAD && Time.timeScale != 0)
         {
 
-            _attackInb = Input.GetKeyDown("k");
-            _dodgeInb = Input.GetKeyDown("j");
+            // _attackInb = Input.GetKeyDown("k");
+            // _dodgeInb = Input.GetKeyDown("j");
+            
+            _attackInb = Input.GetMouseButton(0);
+            _dodgeInb = Input.GetKeyDown("space");
+            
             if (_attackInb && _currentAnimationState != STATE_DODGE)
             {
                 if(_currentAnimationState == STATE_WALK || _currentAnimationState == STATE_IDLE){
@@ -283,7 +287,7 @@ public class PlayerMovement : MonoBehaviour
             AudioManager.instance.Play("GettingHit");
 
             StageData._data.SetHP(player_hp);
-
+            
             if (player_hp <= 0)
             {
                 OnKill();
@@ -340,7 +344,6 @@ public class PlayerMovement : MonoBehaviour
         {
             StageData._data.NextLevel();// go to next level
             UnityEngine.SceneManagement.SceneManager.LoadScene("Game");
-            AudioManager.instance.Play("DoorOpening");
         }
     }
 }

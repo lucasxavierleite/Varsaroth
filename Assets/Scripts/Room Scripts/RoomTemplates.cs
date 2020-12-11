@@ -19,6 +19,8 @@ public class RoomTemplates : MonoBehaviour
     [SerializeField]
     public GameObject _King;
 
+    public int _lastStage = 3;
+
     public int _minimumSize;
     public int _leftToSpawn;
     public List<GameObject> _rooms;
@@ -29,7 +31,7 @@ public class RoomTemplates : MonoBehaviour
         Debug.Log(_rand);
         Instantiate(StartRoom[_rand], transform.position, Quaternion.identity);
 
-        if (StageData._data.GetStage() == 3)//change to == 3 to test king
+        if (StageData._data.GetStage() != _lastStage) //change to == _lastStage to test king
         {
             Invoke("SpawnGate", 2f);
         }
@@ -37,7 +39,6 @@ public class RoomTemplates : MonoBehaviour
         {
             Invoke("SpawnKing", 2f);
         }
-            
 
         _leftToSpawn = 13 + 2 * StageData._data.GetStage();
         _minimumSize = 2 * StageData._data.GetStage();

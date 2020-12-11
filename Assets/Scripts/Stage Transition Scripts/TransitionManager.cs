@@ -55,27 +55,25 @@ public class TransitionManager : MonoBehaviour
         ReadStory();
         Show();
     }
-    
+
     void Update()
     {
-        if (Input.GetKeyDown("space") || Input.GetKeyDown("return"))
+        if (_transitionCanvas.activeSelf)
         {
-            if (_continueButton.activeSelf)
+            if (Input.GetKeyDown("space") || Input.GetKeyDown("return"))
             {
-                Continue();
+                if (_continueButton.activeSelf)
+                {
+                    Continue();
+                }
+                else if (_nextButton.activeSelf)
+                {
+                    Next();
+                }
             }
-            else if (_nextButton.activeSelf)
-            {
-                Next();
-            }
-        }
 
-        // check if trapdoor SFX is finished before playing the backround music
-        
-        // if (!AudioManager.instance.isPlaying("Trapdoor"))
-        // {
-        //  	_storyBackgroundMusic.Play(); 
-        // }
+            AudioManager.instance.StopAllExcept("Trapdoor");
+        }
     }
 
     public void Show()
@@ -86,7 +84,7 @@ public class TransitionManager : MonoBehaviour
         Time.timeScale = 0;
         _transitionCanvas.SetActive(true);
 
-        if (_transitionsList[_currentStage - 1].Count > 1) // if there's more than one page, show next button
+        if (_transitionsList[_currentStage].Count > 1) // if there's more than one page, show next button
         {
             ShowNextButton();
         }
@@ -96,14 +94,16 @@ public class TransitionManager : MonoBehaviour
         }
 
         _stageBackgroundMusic.Stop();
-		_storyBackgroundMusic.Play();
 
-        // if it's not the first stage, play the trapdoor SFX first
+        // if it's not the first or last stage, play the trapdoor SFX
         
-        // if (StageData._data.GetStage() > 1)
-        // {
-        //     AudioManager.instance.Play("Trapdoor");
-        // }
+        if (_currentStage > 1 && _currentStage < _transitionsList.Count - 1)
+        {
+            AudioManager.instance.Play("Trapdoor");
+            Debug.Log("trapdoor");
+        }
+        
+        _storyBackgroundMusic.Play();
 
 		_currentPage = 1;
         UpdateText();
@@ -123,7 +123,7 @@ public class TransitionManager : MonoBehaviour
         _currentPage++;
         UpdateText();
         
-        if (_transitionsList[_currentStage - 1].Count <= _currentPage) // if there's no more text to show
+        if (_transitionsList[_currentStage].Count <= _currentPage) // if there's no more text to show
         {
             ShowContinueButton();
         }
@@ -131,11 +131,12 @@ public class TransitionManager : MonoBehaviour
 
     public void Continue()
     {
-        if (_currentStage < _transitionsList.Count) // if it's not the final transition
+        if (_currentStage < _transitionsList.Count - 1) // if it's not the final transition
         {
+            Hide();
             _storyBackgroundMusic.Stop();
             _stageBackgroundMusic.Play();
-            Hide();
+            AudioManager.instance.Play("GateSound");
         }
         else // if it is, load credits scene
         {
@@ -155,13 +156,13 @@ public class TransitionManager : MonoBehaviour
             _transitionsList.Add(stp);
         }
 
-        // PrintStory();
+        PrintStory();
 
     }
 
     private void UpdateText()
     {
-        _storyText.text = _transitionsList[_currentStage - 1][_currentPage - 1];
+        _storyText.text = _transitionsList[_currentStage][_currentPage - 1];
         Debug.Log("Showing text from " + _currentStage + " stage");
     }
 
@@ -189,7 +190,7 @@ public class TransitionManager : MonoBehaviour
 
     public void ShowFinalTransition()
     {
-        _currentStage = _transitionsList.Count;
+        _currentStage = _transitionsList.Count - 1;
         Show();
     }
     
