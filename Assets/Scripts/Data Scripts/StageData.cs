@@ -7,8 +7,9 @@ public class StageData : MonoBehaviour
     // This class allows us to manage any data that has to be transitioned from a scene to another 
     public static StageData _data;
     public int _stage;
+    private const int _baseHP = 100;
     private int _playerHP;
-    private int _maxHP = 100;
+    private int _maxHP = _baseHP;
 
     private void Start()
     {
@@ -24,7 +25,8 @@ public class StageData : MonoBehaviour
     public void Restart()//go back to level 1
     {
         _stage = 1;
-        _playerHP = _maxHP;
+        _playerHP = _baseHP;
+        _maxHP = _baseHP;
     }
 
     public int GetStage()// returns current stage
