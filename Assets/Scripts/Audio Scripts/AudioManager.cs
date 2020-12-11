@@ -26,6 +26,7 @@ public class AudioManager : MonoBehaviour
             s.source.volume = s.volume;
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
+			s.playInTransition = false;
         }
         
     }
@@ -63,6 +64,17 @@ public class AudioManager : MonoBehaviour
         s.source.Stop();
     }
 
+	public void StopAllExcept (string name)
+    {
+        foreach (Sound s in sounds)
+        {
+            if (s.name != name)
+            {
+                s.source.Stop();
+            }
+        }
+    }
+
     public void Pause (string name)
     {
         Sound s = Array.Find(sounds, sound => sound.name == name);
@@ -83,18 +95,7 @@ public class AudioManager : MonoBehaviour
         }
 
         s.source.UnPause();
-    }
-
-    public void StopAllExcept (string name)
-    {
-        foreach (Sound s in sounds)
-        {
-            if (s.name != name)
-            {
-                s.source.Stop();
-            }
-        }
-    }
+    }    
 
 	public void PauseAll ()
 	{
@@ -109,6 +110,26 @@ public class AudioManager : MonoBehaviour
 		foreach (Sound s in sounds)
         {
             s.source.UnPause();
+        }
+	}
+
+	public void EnablePlayInTransition (string name)
+	{
+		Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(s == null){
+            Debug.LogWarning("Sound: " + name + " not found!");
+            return;
+        }
+
+        s.playInTransition = true;
+	}
+
+	public void TransitionSounds ()
+	{
+		foreach (Sound s in sounds)
+        {
+			if (!s.playInTransition)
+            	s.source.Stop();
         }
 	}
 

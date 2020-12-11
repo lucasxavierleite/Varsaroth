@@ -49,6 +49,9 @@ public class TransitionManager : MonoBehaviour
 
     void Start()
     {
+        AudioManager.instance.EnablePlayInTransition("Trapdoor");
+        AudioManager.instance.EnablePlayInTransition("MenuButtonHover");
+        AudioManager.instance.EnablePlayInTransition("MenuButtonClick");
 		_stageBackgroundMusic = Camera.main.GetComponent<AudioSource>();
 		_storyBackgroundMusic = GetComponent<AudioSource>();
         _currentStage = StageData._data.GetStage();
@@ -72,7 +75,7 @@ public class TransitionManager : MonoBehaviour
                 }
             }
 
-            AudioManager.instance.StopAllExcept("Trapdoor");
+            AudioManager.instance.TransitionSounds();
         }
     }
 
