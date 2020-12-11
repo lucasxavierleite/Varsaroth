@@ -15,6 +15,7 @@ public class EnemyController : MonoBehaviour
     public float speed = 50.0f; //In what time will the enemy complete the journey between its position and the players position
 
     public bool _canMove; // Indicates if monster can move
+    bool _canAttack;
 
     private float _attackRange = 20.0f;
 
@@ -47,11 +48,12 @@ public class EnemyController : MonoBehaviour
         _renderer = GetComponentInChildren<SpriteRenderer>();
         _collider = GetComponent<Collider2D>();
         _canMove = false;
+        _canAttack = true;
     }
 
     private void Update()
     {
-        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != 4)
+        if (_currentAnimationState != STATE_DEAD && PlayerMovement._currentAnimationState != 4 && _canAttack == true)
         {
 
             if (_canMove == true  && _currentAnimationState != STATE_ATTACK)
@@ -188,8 +190,23 @@ public class EnemyController : MonoBehaviour
         if (_currentAnimationState == STATE_ATTACK)
         {
             ChangeState(STATE_IDLE);
+            StartCoroutine(AttackCD());
         }
 
+    }
+
+    IEnumerator AttackCD()
+    {
+        _canAttack = false;
+        //Print the time of when the function is first called.
+        Debug.Log("Started Coroutine at timestamp : " + Time.time);
+
+        //yield on a new YieldInstruction that waits for 1.5 seconds.
+        yield return new WaitForSeconds(0.5f);
+
+        //After we have waited 1.5 seconds print the time again.
+        Debug.Log("Finished Coroutine at timestamp : " + Time.time);
+        _canAttack = true;
     }
 
     /* Funcao do inimigo de receber dano */
