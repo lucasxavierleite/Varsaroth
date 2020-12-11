@@ -100,7 +100,6 @@ public class TransitionManager : MonoBehaviour
         if (_currentStage > 1 && _currentStage < _transitionsList.Count - 1)
         {
             AudioManager.instance.Play("Trapdoor");
-            Debug.Log("trapdoor");
         }
         
         _storyBackgroundMusic.Play();
@@ -156,14 +155,13 @@ public class TransitionManager : MonoBehaviour
             _transitionsList.Add(stp);
         }
 
-        PrintStory();
+        // PrintStory();
 
     }
 
     private void UpdateText()
     {
         _storyText.text = _transitionsList[_currentStage][_currentPage - 1];
-        Debug.Log("Showing text from " + _currentStage + " stage");
     }
 
     private void ShowNextButton()

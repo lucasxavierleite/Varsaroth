@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameMenus : MonoBehaviour
@@ -36,10 +37,6 @@ public class GameMenus : MonoBehaviour
         {
             DeathButton();
         }
-        if (Input.GetKeyDown("1")) // for debugging purposes only
-        {
-            ShowCursor();
-        }
     }
 
     public void PauseButton()   //pause or unpause game
@@ -55,6 +52,7 @@ public class GameMenus : MonoBehaviour
             Time.timeScale = 0;
             volume.SetActive(true);
             pauseScreen.SetActive(true);
+			AudioManager.instance.PauseAll();
         }
         else // if paused, unpause
         {
@@ -69,6 +67,7 @@ public class GameMenus : MonoBehaviour
         deathScreen.SetActive(false);
         volume.SetActive(false);
         Time.timeScale = 1;
+		AudioManager.instance.UnPauseAll();
     }
 
     public void DeathButton()
@@ -101,15 +100,25 @@ public class GameMenus : MonoBehaviour
         text.color = menuItemDefaultColor;
     }
 
+	public void MenuButtonPointerEnter(Image image)
+    {
+        image.color = menuItemHighlightColor;
+    }
+    
+    public void MenuButtonPointerExit(Image image)
+    {
+        image.color = menuItemDefaultColor;
+    }
+
     public void ShowCursor()
     {
-        // Cursor.visible = true;
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     
     public void HideCursor()
     {
-        // Cursor.visible = false;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }

@@ -96,4 +96,20 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+	public void PauseAll ()
+	{
+		foreach (Sound s in sounds)
+        {
+            s.source.Pause();
+        }
+	}
+
+	public void UnPauseAll ()
+	{
+		foreach (Sound s in sounds)
+        {
+            s.source.UnPause();
+        }
+	}
+
 }
