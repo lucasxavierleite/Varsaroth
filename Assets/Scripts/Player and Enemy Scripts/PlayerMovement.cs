@@ -28,7 +28,7 @@ public class PlayerMovement : MonoBehaviour
     private bool _attackInb;
     private bool _dodgeInb;
 
-    private int player_hp = StageData._data.GetHP(); // StageData script holds global hp and max hp values
+    private int player_hp;  // StageData script holds global hp and max hp values
 
     public float _dashSpeed;
     public bool _isInvulnerable;
@@ -43,6 +43,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player_hp = StageData._data.GetHP();
         _currentAnimationState = STATE_IDLE;
         _playerRB = GetComponent<Rigidbody2D>();
         _animator = GetComponentInChildren<Animator>();
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
         _isDead = false;
         _hpBar.SetMaxHp(StageData._data.GetMAXHP());
         _hpBar.SetHp(player_hp);
+        
     }
 
     private void Update()
