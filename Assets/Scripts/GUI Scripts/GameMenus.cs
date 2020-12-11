@@ -103,13 +103,13 @@ public class GameMenus : MonoBehaviour
 
     public void ShowCursor()
     {
-        // Cursor.visible = true;
+        Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
     }
     
     public void HideCursor()
     {
-        // Cursor.visible = false;
+        Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
     }
 }
