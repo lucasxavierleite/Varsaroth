@@ -151,7 +151,7 @@ TextureImporter:
     second: KeyASD
   - first:
       213: 6343875679830138106
-    second: Keyboard Black Corn_3
+    second: KeySpace
   - first:
       213: 3890300741390651174
     second: Keyboard Black Corn_4
@@ -275,6 +275,9 @@ TextureImporter:
   - first:
       213: 8734558287865600337
     second: KeyK
+  - first:
+      213: -4459032252121609803
+    second: KeyMouse
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -1000,6 +1003,48 @@ TextureImporter:
       bones: []
       spriteID: 1595c223c72673970800000000000000
       internalID: 8734558287865600337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeySpace
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 64
+        width: 80
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcd38bc159f90850800000000000000
+      internalID: 6343875679830138106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KeyMouse
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 241
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9084aaac55e12c0800000000000000
+      internalID: -4459032252121609803
       vertices: []
       indices: 
       edges: []

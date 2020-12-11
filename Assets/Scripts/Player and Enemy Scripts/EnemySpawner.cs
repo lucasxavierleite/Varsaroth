@@ -21,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
             _spawnY = Random.Range (Camera.main.ScreenToWorldPoint(new Vector2(0, 0)).y + 50, Camera.main.ScreenToWorldPoint(new Vector2(0, Screen.height)).y - 50);
 
             Vector2 spawnPosition = new Vector2(_spawnX, _spawnY);
-            Instantiate(_enemies[Random.Range(0, 1)], spawnPosition, Quaternion.identity);
+            Instantiate(_enemies[Random.Range(0, 2)], spawnPosition, Quaternion.identity);
 
         }
     }
