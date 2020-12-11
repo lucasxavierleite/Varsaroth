@@ -17,7 +17,7 @@ public class Enemy2Controller : MonoBehaviour
     public bool _canAttack;
 
     private float _attackRange = 40.0f;
-    private int enemy_hp = 75;
+    private int enemy_hp = 50;
 
     RoomStatus _temporaryRoom;
 
@@ -176,7 +176,7 @@ public class Enemy2Controller : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
-            enemy.SendMessageUpwards("TakeDamage", 20);
+            enemy.SendMessageUpwards("TakeDamage", 15);
             _playerHit = true;
         }
     }
@@ -223,7 +223,7 @@ public class Enemy2Controller : MonoBehaviour
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 1.5 seconds.
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.65f);
 
         //After we have waited 1.5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);

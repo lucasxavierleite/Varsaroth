@@ -170,7 +170,7 @@ public class EnemyController : MonoBehaviour
         //damage enemies hit, for now kills them
         foreach (Collider2D enemy in _enemiesHit)
         {
-            enemy.SendMessageUpwards("TakeDamage", 30);
+            enemy.SendMessageUpwards("TakeDamage", 25);
         }
     }
 
@@ -190,9 +190,9 @@ public class EnemyController : MonoBehaviour
         if (_currentAnimationState == STATE_ATTACK)
         {
             ChangeState(STATE_IDLE);
-            StartCoroutine(AttackCD());
+            
         }
-
+        StartCoroutine(AttackCD());
     }
 
     IEnumerator AttackCD()
@@ -202,7 +202,7 @@ public class EnemyController : MonoBehaviour
         Debug.Log("Started Coroutine at timestamp : " + Time.time);
 
         //yield on a new YieldInstruction that waits for 1.5 seconds.
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(0.65f);
 
         //After we have waited 1.5 seconds print the time again.
         Debug.Log("Finished Coroutine at timestamp : " + Time.time);

@@ -78,6 +78,7 @@ public class TransitionManager : MonoBehaviour
 
     public void Show()
     {
+        Cursor.visible = true;
         _menuCanvas.SetActive(false);
         _HUDCanvas.SetActive(false);
         Cursor.lockState = CursorLockMode.None;
@@ -110,6 +111,7 @@ public class TransitionManager : MonoBehaviour
 
     public void Hide()
     {
+        Cursor.visible = false;
         Time.timeScale = 1;
         _menuCanvas.SetActive(true);
         _HUDCanvas.SetActive(true);
