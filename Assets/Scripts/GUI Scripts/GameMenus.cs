@@ -12,6 +12,9 @@ public class GameMenus : MonoBehaviour
     [SerializeField]
     GameObject deathScreen = null;
 
+	[SerializeField]
+    GameObject controlsScreen = null;
+
     [SerializeField]
     private Color32 menuItemDefaultColor;
     
@@ -29,6 +32,15 @@ public class GameMenus : MonoBehaviour
 
     void Update()
     {
+		if (Input.GetKeyDown("escape") && controlsScreen.activeSelf)
+		{
+			foreach (Transform child in pauseScreen.transform)
+			{
+				child.gameObject.SetActive(true);
+			}
+			controlsScreen.SetActive(false);
+		}
+
         if (Input.GetKeyDown("escape") && PlayerMovement._currentAnimationState != 4)
         {
             PauseButton();
